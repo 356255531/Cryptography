@@ -1,0 +1,29 @@
+{
+  "mainFile": "C:/Users/Finn/Dropbox/Lehrveranstaltungen/kryptographie/\u00dcbung2/Aufgabe/SIKA_Aufgabe_2/main.py", 
+  "use-tabs": false, 
+  "venv": "", 
+  "relatedProjects": [], 
+  "name": "Aufgabe", 
+  "license": "", 
+  "url": "", 
+  "pythonPath": "C:\\Python27\\python.exe", 
+  "preExecScript": "", 
+  "additional_builtins": [], 
+  "programParams": "", 
+  "indentation": 4, 
+  "PYTHONPATH": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".js", 
+    ".ini"
+  ], 
+  "project-type": "", 
+  "postExecScript": "", 
+  "description": ""
+}

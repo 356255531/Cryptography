@@ -1,0 +1,25 @@
+{
+  "mainFile": "main.py", 
+  "venv": "", 
+  "relatedProjects": [], 
+  "name": "DFA on AES Framework", 
+  "url": "", 
+  "pythonPath": "python", 
+  "preExecScript": "", 
+  "programParams": "", 
+  "PYTHONPATH": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".js", 
+    ".ini"
+  ], 
+  "project-type": "Import from sources", 
+  "postExecScript": "", 
+  "description": ""
+}

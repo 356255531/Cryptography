@@ -1,0 +1,11 @@
+--- src/systemclock.cpp	2013-03-17 09:51:24.557628567 +0100
++++ src/systemclock.cpp	2013-03-17 09:50:51.052662567 +0100
+@@ -67,7 +67,7 @@
+ template<typename Key, typename Value>
+ void MinHeap<Key, Value>::Insert(Key k, Value v)
+ {
+-	resize(this->size()+1);
++	this->resize(this->size()+1);
+ 	for(unsigned i = this->size();;) {
+ 		unsigned parent = i/2;
+ 		if(parent == 0 || (*this)[parent-1].first < k) {

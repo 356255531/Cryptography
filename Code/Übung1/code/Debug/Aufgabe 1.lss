@@ -1,0 +1,3112 @@
+
+Aufgabe 1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000026  00800100  000017b2  00001846  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000017b2  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000004  00800126  00800126  0000186c  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  0000186c  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  0000189c  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000050  00000000  00000000  000018d8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00002797  00000000  00000000  00001928  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000023a  00000000  00000000  000040bf  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000029a  00000000  00000000  000042f9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000138  00000000  00000000  00004594  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    000001de  00000000  00000000  000046cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00003c2e  00000000  00000000  000048aa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000030  00000000  00000000  000084d8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 bd 01 	jmp	0x37a	; 0x37a <__ctors_end>
+       4:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+       8:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+       c:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      10:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      14:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      18:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      1c:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      20:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      24:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      28:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      2c:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      30:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      34:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      38:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      3c:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      40:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      44:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      48:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      4c:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      50:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      54:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      58:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      5c:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      60:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      64:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      68:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+      6c:	0c 94 da 01 	jmp	0x3b4	; 0x3b4 <__bad_interrupt>
+
+00000070 <Multi3>:
+      70:	00 03 06 05 0c 0f 0a 09 18 1b 1e 1d 14 17 12 11     ................
+      80:	30 33 36 35 3c 3f 3a 39 28 2b 2e 2d 24 27 22 21     0365<?:9(+.-$'"!
+      90:	60 63 66 65 6c 6f 6a 69 78 7b 7e 7d 74 77 72 71     `cfelojix{~}twrq
+      a0:	50 53 56 55 5c 5f 5a 59 48 4b 4e 4d 44 47 42 41     PSVU\_ZYHKNMDGBA
+      b0:	c0 c3 c6 c5 cc cf ca c9 d8 db de dd d4 d7 d2 d1     ................
+      c0:	f0 f3 f6 f5 fc ff fa f9 e8 eb ee ed e4 e7 e2 e1     ................
+      d0:	a0 a3 a6 a5 ac af aa a9 b8 bb be bd b4 b7 b2 b1     ................
+      e0:	90 93 96 95 9c 9f 9a 99 88 8b 8e 8d 84 87 82 81     ................
+      f0:	9b 98 9d 9e 97 94 91 92 83 80 85 86 8f 8c 89 8a     ................
+     100:	ab a8 ad ae a7 a4 a1 a2 b3 b0 b5 b6 bf bc b9 ba     ................
+     110:	fb f8 fd fe f7 f4 f1 f2 e3 e0 e5 e6 ef ec e9 ea     ................
+     120:	cb c8 cd ce c7 c4 c1 c2 d3 d0 d5 d6 df dc d9 da     ................
+     130:	5b 58 5d 5e 57 54 51 52 43 40 45 46 4f 4c 49 4a     [X]^WTQRC@EFOLIJ
+     140:	6b 68 6d 6e 67 64 61 62 73 70 75 76 7f 7c 79 7a     khmngdabspuv.|yz
+     150:	3b 38 3d 3e 37 34 31 32 23 20 25 26 2f 2c 29 2a     ;8=>7412# %&/,)*
+     160:	0b 08 0d 0e 07 04 01 02 13 10 15 16 1f 1c 19 1a     ................
+
+00000170 <Multi2>:
+     170:	00 02 04 06 08 0a 0c 0e 10 12 14 16 18 1a 1c 1e     ................
+     180:	20 22 24 26 28 2a 2c 2e 30 32 34 36 38 3a 3c 3e      "$&(*,.02468:<>
+     190:	40 42 44 46 48 4a 4c 4e 50 52 54 56 58 5a 5c 5e     @BDFHJLNPRTVXZ\^
+     1a0:	60 62 64 66 68 6a 6c 6e 70 72 74 76 78 7a 7c 7e     `bdfhjlnprtvxz|~
+     1b0:	80 82 84 86 88 8a 8c 8e 90 92 94 96 98 9a 9c 9e     ................
+     1c0:	a0 a2 a4 a6 a8 aa ac ae b0 b2 b4 b6 b8 ba bc be     ................
+     1d0:	c0 c2 c4 c6 c8 ca cc ce d0 d2 d4 d6 d8 da dc de     ................
+     1e0:	e0 e2 e4 e6 e8 ea ec ee f0 f2 f4 f6 f8 fa fc fe     ................
+     1f0:	1b 19 1f 1d 13 11 17 15 0b 09 0f 0d 03 01 07 05     ................
+     200:	3b 39 3f 3d 33 31 37 35 2b 29 2f 2d 23 21 27 25     ;9?=3175+)/-#!'%
+     210:	5b 59 5f 5d 53 51 57 55 4b 49 4f 4d 43 41 47 45     [Y_]SQWUKIOMCAGE
+     220:	7b 79 7f 7d 73 71 77 75 6b 69 6f 6d 63 61 67 65     {y.}sqwukiomcage
+     230:	9b 99 9f 9d 93 91 97 95 8b 89 8f 8d 83 81 87 85     ................
+     240:	bb b9 bf bd b3 b1 b7 b5 ab a9 af ad a3 a1 a7 a5     ................
+     250:	db d9 df dd d3 d1 d7 d5 cb c9 cf cd c3 c1 c7 c5     ................
+     260:	fb f9 ff fd f3 f1 f7 f5 eb e9 ef ed e3 e1 e7 e5     ................
+
+00000270 <RCon>:
+     270:	01 02 04 08 10 20 40 80 1b 36                       ..... @..6
+
+0000027a <SBox>:
+     27a:	63 7c 77 7b f2 6b 6f c5 30 01 67 2b fe d7 ab 76     c|w{.ko.0.g+...v
+     28a:	ca 82 c9 7d fa 59 47 f0 ad d4 a2 af 9c a4 72 c0     ...}.YG.......r.
+     29a:	b7 fd 93 26 36 3f f7 cc 34 a5 e5 f1 71 d8 31 15     ...&6?..4...q.1.
+     2aa:	04 c7 23 c3 18 96 05 9a 07 12 80 e2 eb 27 b2 75     ..#..........'.u
+     2ba:	09 83 2c 1a 1b 6e 5a a0 52 3b d6 b3 29 e3 2f 84     ..,..nZ.R;..)./.
+     2ca:	53 d1 00 ed 20 fc b1 5b 6a cb be 39 4a 4c 58 cf     S... ..[j..9JLX.
+     2da:	d0 ef aa fb 43 4d 33 85 45 f9 02 7f 50 3c 9f a8     ....CM3.E...P<..
+     2ea:	51 a3 40 8f 92 9d 38 f5 bc b6 da 21 10 ff f3 d2     Q.@...8....!....
+     2fa:	cd 0c 13 ec 5f 97 44 17 c4 a7 7e 3d 64 5d 19 73     ...._.D...~=d].s
+     30a:	60 81 4f dc 22 2a 90 88 46 ee b8 14 de 5e 0b db     `.O."*..F....^..
+     31a:	e0 32 3a 0a 49 06 24 5c c2 d3 ac 62 91 95 e4 79     .2:.I.$\...b...y
+     32a:	e7 c8 37 6d 8d d5 4e a9 6c 56 f4 ea 65 7a ae 08     ..7m..N.lV..ez..
+     33a:	ba 78 25 2e 1c a6 b4 c6 e8 dd 74 1f 4b bd 8b 8a     .x%.......t.K...
+     34a:	70 3e b5 66 48 03 f6 0e 61 35 57 b9 86 c1 1d 9e     p>.fH...a5W.....
+     35a:	e1 f8 98 11 69 d9 8e 94 9b 1e 87 e9 ce 55 28 df     ....i........U(.
+     36a:	8c a1 89 0d bf e6 42 68 41 99 2d 0f b0 54 bb 16     ......BhA.-..T..
+
+0000037a <__ctors_end>:
+     37a:	11 24       	eor	r1, r1
+     37c:	1f be       	out	0x3f, r1	; 63
+     37e:	cf ef       	ldi	r28, 0xFF	; 255
+     380:	d0 e1       	ldi	r29, 0x10	; 16
+     382:	de bf       	out	0x3e, r29	; 62
+     384:	cd bf       	out	0x3d, r28	; 61
+
+00000386 <__do_copy_data>:
+     386:	11 e0       	ldi	r17, 0x01	; 1
+     388:	a0 e0       	ldi	r26, 0x00	; 0
+     38a:	b1 e0       	ldi	r27, 0x01	; 1
+     38c:	e2 eb       	ldi	r30, 0xB2	; 178
+     38e:	f7 e1       	ldi	r31, 0x17	; 23
+     390:	02 c0       	rjmp	.+4      	; 0x396 <__do_copy_data+0x10>
+     392:	05 90       	lpm	r0, Z+
+     394:	0d 92       	st	X+, r0
+     396:	a6 32       	cpi	r26, 0x26	; 38
+     398:	b1 07       	cpc	r27, r17
+     39a:	d9 f7       	brne	.-10     	; 0x392 <__do_copy_data+0xc>
+
+0000039c <__do_clear_bss>:
+     39c:	21 e0       	ldi	r18, 0x01	; 1
+     39e:	a6 e2       	ldi	r26, 0x26	; 38
+     3a0:	b1 e0       	ldi	r27, 0x01	; 1
+     3a2:	01 c0       	rjmp	.+2      	; 0x3a6 <.do_clear_bss_start>
+
+000003a4 <.do_clear_bss_loop>:
+     3a4:	1d 92       	st	X+, r1
+
+000003a6 <.do_clear_bss_start>:
+     3a6:	aa 32       	cpi	r26, 0x2A	; 42
+     3a8:	b2 07       	cpc	r27, r18
+     3aa:	e1 f7       	brne	.-8      	; 0x3a4 <.do_clear_bss_loop>
+     3ac:	0e 94 dc 01 	call	0x3b8	; 0x3b8 <main>
+     3b0:	0c 94 d7 0b 	jmp	0x17ae	; 0x17ae <_exit>
+
+000003b4 <__bad_interrupt>:
+     3b4:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000003b8 <main>:
+#include <avr/io.h>
+#include <inttypes.h>
+#include "student.h"
+
+int main()
+{
+     3b8:	cf 93       	push	r28
+     3ba:	df 93       	push	r29
+     3bc:	cd b7       	in	r28, 0x3d	; 61
+     3be:	de b7       	in	r29, 0x3e	; 62
+     3c0:	a1 97       	sbiw	r28, 0x21	; 33
+     3c2:	0f b6       	in	r0, 0x3f	; 63
+     3c4:	f8 94       	cli
+     3c6:	de bf       	out	0x3e, r29	; 62
+     3c8:	0f be       	out	0x3f, r0	; 63
+     3ca:	cd bf       	out	0x3d, r28	; 61
+
+    uint8_t key[16] =
+     3cc:	80 e1       	ldi	r24, 0x10	; 16
+     3ce:	e6 e0       	ldi	r30, 0x06	; 6
+     3d0:	f1 e0       	ldi	r31, 0x01	; 1
+     3d2:	de 01       	movw	r26, r28
+     3d4:	51 96       	adiw	r26, 0x11	; 17
+     3d6:	01 90       	ld	r0, Z+
+     3d8:	0d 92       	st	X+, r0
+     3da:	8a 95       	dec	r24
+     3dc:	e1 f7       	brne	.-8      	; 0x3d6 <main+0x1e>
+	{ 0xF3, 0x54, 0x1F, 0xA3, 0x4B, 0x33, 0x9C, 0x0D,
+          0x80, 0x23, 0x7A, 0xF9, 0x7C, 0x21, 0xD7, 0x3B };
+    uint8_t buf[16] =
+     3de:	80 e1       	ldi	r24, 0x10	; 16
+     3e0:	e6 e1       	ldi	r30, 0x16	; 22
+     3e2:	f1 e0       	ldi	r31, 0x01	; 1
+     3e4:	de 01       	movw	r26, r28
+     3e6:	11 96       	adiw	r26, 0x01	; 1
+     3e8:	01 90       	ld	r0, Z+
+     3ea:	0d 92       	st	X+, r0
+     3ec:	8a 95       	dec	r24
+     3ee:	e1 f7       	brne	.-8      	; 0x3e8 <main+0x30>
+	{ 0x83, 0x85, 0x1F, 0xAB, 0x60, 0x41, 0xCD, 0xF5,
+	  0x4A, 0x41, 0x6C, 0xDA, 0xF0, 0x12, 0xC2, 0xD4 };
+
+    #define n_enc 30                    // number of encryptions
+    volatile uint8_t counter = n_enc;	// counter (must be volatile)
+     3f0:	8e e1       	ldi	r24, 0x1E	; 30
+     3f2:	89 a3       	std	Y+33, r24	; 0x21
+    uint8_t *param;
+
+    param = aes128_init(key);
+     3f4:	ce 01       	movw	r24, r28
+     3f6:	41 96       	adiw	r24, 0x11	; 17
+     3f8:	0e 94 11 02 	call	0x422	; 0x422 <aes128_init>
+     3fc:	8c 01       	movw	r16, r24
+
+    while (counter > 0) {
+     3fe:	99 a1       	ldd	r25, Y+33	; 0x21
+     400:	99 23       	and	r25, r25
+     402:	59 f0       	breq	.+22     	; 0x41a <main+0x62>
+
+	aes128_encrypt(buf, param);	// actual AES encryption
+     404:	b8 01       	movw	r22, r16
+     406:	ce 01       	movw	r24, r28
+     408:	01 96       	adiw	r24, 0x01	; 1
+     40a:	0e 94 2e 03 	call	0x65c	; 0x65c <aes128_encrypt>
+
+	counter--;
+     40e:	99 a1       	ldd	r25, Y+33	; 0x21
+     410:	91 50       	subi	r25, 0x01	; 1
+     412:	99 a3       	std	Y+33, r25	; 0x21
+    volatile uint8_t counter = n_enc;	// counter (must be volatile)
+    uint8_t *param;
+
+    param = aes128_init(key);
+
+    while (counter > 0) {
+     414:	89 a1       	ldd	r24, Y+33	; 0x21
+     416:	81 11       	cpse	r24, r1
+     418:	f5 cf       	rjmp	.-22     	; 0x404 <main+0x4c>
+
+	counter--;
+
+    }
+
+    counter--;
+     41a:	89 a1       	ldd	r24, Y+33	; 0x21
+     41c:	81 50       	subi	r24, 0x01	; 1
+     41e:	89 a3       	std	Y+33, r24	; 0x21
+
+    // Endless loop
+    while (1) {
+    }
+     420:	ff cf       	rjmp	.-2      	; 0x420 <main+0x68>
+
+00000422 <aes128_init>:
+	0x6b,0x68,0x6d,0x6e,0x67,0x64,0x61,0x62,0x73,0x70,0x75,0x76,0x7f,0x7c,0x79,0x7a,
+	0x3b,0x38,0x3d,0x3e,0x37,0x34,0x31,0x32,0x23,0x20,0x25,0x26,0x2f,0x2c,0x29,0x2a,
+	0x0b,0x08,0x0d,0x0e,0x07,0x04,0x01,0x02,0x13,0x10,0x15,0x16,0x1f,0x1c,0x19,0x1a
+};
+void *aes128_init(void *key)
+{
+     422:	2f 92       	push	r2
+     424:	3f 92       	push	r3
+     426:	4f 92       	push	r4
+     428:	5f 92       	push	r5
+     42a:	6f 92       	push	r6
+     42c:	7f 92       	push	r7
+     42e:	8f 92       	push	r8
+     430:	9f 92       	push	r9
+     432:	af 92       	push	r10
+     434:	bf 92       	push	r11
+     436:	cf 92       	push	r12
+     438:	df 92       	push	r13
+     43a:	ef 92       	push	r14
+     43c:	ff 92       	push	r15
+     43e:	0f 93       	push	r16
+     440:	1f 93       	push	r17
+     442:	cf 93       	push	r28
+     444:	df 93       	push	r29
+     446:	cd b7       	in	r28, 0x3d	; 61
+     448:	de b7       	in	r29, 0x3e	; 62
+     44a:	2c 97       	sbiw	r28, 0x0c	; 12
+     44c:	0f b6       	in	r0, 0x3f	; 63
+     44e:	f8 94       	cli
+     450:	de bf       	out	0x3e, r29	; 62
+     452:	0f be       	out	0x3f, r0	; 63
+     454:	cd bf       	out	0x3d, r28	; 61
+     456:	8c 01       	movw	r16, r24
+	int i = 0;
+    	uint32_t *RK;
+	uint8_t b0,b1,b2,b3;
+	RK = (uint32_t *)malloc(176);
+     458:	80 eb       	ldi	r24, 0xB0	; 176
+     45a:	90 e0       	ldi	r25, 0x00	; 0
+     45c:	0e 94 aa 0a 	call	0x1554	; 0x1554 <malloc>
+     460:	9a 87       	std	Y+10, r25	; 0x0a
+     462:	89 87       	std	Y+9, r24	; 0x09
+	RK[0] = *((uint32_t*)key);
+     464:	d8 01       	movw	r26, r16
+     466:	4d 90       	ld	r4, X+
+     468:	5d 90       	ld	r5, X+
+     46a:	6d 90       	ld	r6, X+
+     46c:	7c 90       	ld	r7, X
+     46e:	dc 01       	movw	r26, r24
+     470:	4d 92       	st	X+, r4
+     472:	5d 92       	st	X+, r5
+     474:	6d 92       	st	X+, r6
+     476:	7c 92       	st	X, r7
+     478:	13 97       	sbiw	r26, 0x03	; 3
+	RK[1] = *((uint32_t*)key + 1);
+     47a:	f8 01       	movw	r30, r16
+     47c:	84 80       	ldd	r8, Z+4	; 0x04
+     47e:	95 80       	ldd	r9, Z+5	; 0x05
+     480:	a6 80       	ldd	r10, Z+6	; 0x06
+     482:	b7 80       	ldd	r11, Z+7	; 0x07
+     484:	14 96       	adiw	r26, 0x04	; 4
+     486:	8d 92       	st	X+, r8
+     488:	9d 92       	st	X+, r9
+     48a:	ad 92       	st	X+, r10
+     48c:	bc 92       	st	X, r11
+     48e:	17 97       	sbiw	r26, 0x07	; 7
+	RK[2] = *((uint32_t*)key + 2);
+     490:	40 85       	ldd	r20, Z+8	; 0x08
+     492:	51 85       	ldd	r21, Z+9	; 0x09
+     494:	62 85       	ldd	r22, Z+10	; 0x0a
+     496:	73 85       	ldd	r23, Z+11	; 0x0b
+     498:	4d 83       	std	Y+5, r20	; 0x05
+     49a:	5e 83       	std	Y+6, r21	; 0x06
+     49c:	6f 83       	std	Y+7, r22	; 0x07
+     49e:	78 87       	std	Y+8, r23	; 0x08
+     4a0:	dc 01       	movw	r26, r24
+     4a2:	18 96       	adiw	r26, 0x08	; 8
+     4a4:	4d 93       	st	X+, r20
+     4a6:	5d 93       	st	X+, r21
+     4a8:	6d 93       	st	X+, r22
+     4aa:	7c 93       	st	X, r23
+     4ac:	1b 97       	sbiw	r26, 0x0b	; 11
+	RK[3] = *((uint32_t*)key + 3);
+     4ae:	84 85       	ldd	r24, Z+12	; 0x0c
+     4b0:	95 85       	ldd	r25, Z+13	; 0x0d
+     4b2:	a6 85       	ldd	r26, Z+14	; 0x0e
+     4b4:	b7 85       	ldd	r27, Z+15	; 0x0f
+     4b6:	e9 85       	ldd	r30, Y+9	; 0x09
+     4b8:	fa 85       	ldd	r31, Y+10	; 0x0a
+     4ba:	84 87       	std	Z+12, r24	; 0x0c
+     4bc:	95 87       	std	Z+13, r25	; 0x0d
+     4be:	a6 87       	std	Z+14, r26	; 0x0e
+     4c0:	b7 87       	std	Z+15, r27	; 0x0f
+     4c2:	40 e7       	ldi	r20, 0x70	; 112
+     4c4:	24 2e       	mov	r2, r20
+     4c6:	42 e0       	ldi	r20, 0x02	; 2
+     4c8:	34 2e       	mov	r3, r20
+void *aes128_init(void *key)
+{
+	int i = 0;
+    	uint32_t *RK;
+	uint8_t b0,b1,b2,b3;
+	RK = (uint32_t *)malloc(176);
+     4ca:	fc 87       	std	Y+12, r31	; 0x0c
+     4cc:	eb 87       	std	Y+11, r30	; 0x0b
+     4ce:	6c 01       	movw	r12, r24
+     4d0:	7d 01       	movw	r14, r26
+     4d2:	1d c0       	rjmp	.+58     	; 0x50e <aes128_init+0xec>
+        	RK[5] = RK[1] ^ RK[4];
+        	RK[6] = RK[2] ^ RK[5];
+        	RK[7] = RK[3] ^ RK[6];
+         	if (++i==10) 
+			return (RK-36);
+		RK+=4;
+     4d4:	4b 85       	ldd	r20, Y+11	; 0x0b
+     4d6:	5c 85       	ldd	r21, Y+12	; 0x0c
+     4d8:	40 5f       	subi	r20, 0xF0	; 240
+     4da:	5f 4f       	sbci	r21, 0xFF	; 255
+     4dc:	5c 87       	std	Y+12, r21	; 0x0c
+     4de:	4b 87       	std	Y+11, r20	; 0x0b
+     4e0:	da 01       	movw	r26, r20
+     4e2:	1c 96       	adiw	r26, 0x0c	; 12
+     4e4:	cd 90       	ld	r12, X+
+     4e6:	dd 90       	ld	r13, X+
+     4e8:	ed 90       	ld	r14, X+
+     4ea:	fc 90       	ld	r15, X
+     4ec:	1f 97       	sbiw	r26, 0x0f	; 15
+     4ee:	14 96       	adiw	r26, 0x04	; 4
+     4f0:	8d 90       	ld	r8, X+
+     4f2:	9d 90       	ld	r9, X+
+     4f4:	ad 90       	ld	r10, X+
+     4f6:	bc 90       	ld	r11, X
+     4f8:	17 97       	sbiw	r26, 0x07	; 7
+     4fa:	18 96       	adiw	r26, 0x08	; 8
+     4fc:	4d 91       	ld	r20, X+
+     4fe:	5d 91       	ld	r21, X+
+     500:	6d 91       	ld	r22, X+
+     502:	7c 91       	ld	r23, X
+     504:	1b 97       	sbiw	r26, 0x0b	; 11
+     506:	4d 83       	std	Y+5, r20	; 0x05
+     508:	5e 83       	std	Y+6, r21	; 0x06
+     50a:	6f 83       	std	Y+7, r22	; 0x07
+     50c:	78 87       	std	Y+8, r23	; 0x08
+	RK[2] = *((uint32_t*)key + 2);
+	RK[3] = *((uint32_t*)key + 3);
+	while(1)
+	{
+		b3 = (uint8_t)(RK[3]  & 0xff); 
+		b2 = (uint8_t)((RK[3]  >> 8)& 0xff); 
+     50e:	bb 27       	eor	r27, r27
+     510:	af 2d       	mov	r26, r15
+     512:	9e 2d       	mov	r25, r14
+     514:	8d 2d       	mov	r24, r13
+		b1 = (uint8_t)((RK[3]  >> 16)& 0xff);
+     516:	87 01       	movw	r16, r14
+     518:	22 27       	eor	r18, r18
+     51a:	33 27       	eor	r19, r19
+		b0 = (uint8_t)((RK[3]  >> 24)& 0xff);
+     51c:	4f 2d       	mov	r20, r15
+     51e:	55 27       	eor	r21, r21
+     520:	66 27       	eor	r22, r22
+     522:	77 27       	eor	r23, r23
+     524:	49 83       	std	Y+1, r20	; 0x01
+     526:	5a 83       	std	Y+2, r21	; 0x02
+     528:	6b 83       	std	Y+3, r22	; 0x03
+     52a:	7c 83       	std	Y+4, r23	; 0x04
+		b3 = ReadMem( SBox[(b3>>4) & 0xf][b3 & 0xf]);
+     52c:	6c 2d       	mov	r22, r12
+     52e:	62 95       	swap	r22
+     530:	6f 70       	andi	r22, 0x0F	; 15
+     532:	4c 2d       	mov	r20, r12
+     534:	4f 70       	andi	r20, 0x0F	; 15
+     536:	50 e0       	ldi	r21, 0x00	; 0
+     538:	70 e1       	ldi	r23, 0x10	; 16
+     53a:	67 9f       	mul	r22, r23
+     53c:	40 0d       	add	r20, r0
+     53e:	51 1d       	adc	r21, r1
+     540:	11 24       	eor	r1, r1
+     542:	fa 01       	movw	r30, r20
+     544:	e6 58       	subi	r30, 0x86	; 134
+     546:	fd 4f       	sbci	r31, 0xFD	; 253
+     548:	44 91       	lpm	r20, Z
+		b2 = ReadMem(SBox[(b2>>4) & 0xf][b2 & 0xf]) ^ ReadMem(RCon[i]);
+     54a:	58 2f       	mov	r21, r24
+     54c:	52 95       	swap	r21
+     54e:	5f 70       	andi	r21, 0x0F	; 15
+     550:	e8 2f       	mov	r30, r24
+     552:	ef 70       	andi	r30, 0x0F	; 15
+     554:	f0 e0       	ldi	r31, 0x00	; 0
+     556:	80 e1       	ldi	r24, 0x10	; 16
+     558:	58 9f       	mul	r21, r24
+     55a:	e0 0d       	add	r30, r0
+     55c:	f1 1d       	adc	r31, r1
+     55e:	11 24       	eor	r1, r1
+     560:	e6 58       	subi	r30, 0x86	; 134
+     562:	fd 4f       	sbci	r31, 0xFD	; 253
+     564:	94 91       	lpm	r25, Z
+     566:	f1 01       	movw	r30, r2
+     568:	84 91       	lpm	r24, Z
+		b1 = ReadMem(SBox[(b1>>4) & 0xf][b1 & 0xf]);	
+     56a:	50 2f       	mov	r21, r16
+     56c:	52 95       	swap	r21
+     56e:	5f 70       	andi	r21, 0x0F	; 15
+     570:	e0 2f       	mov	r30, r16
+     572:	ef 70       	andi	r30, 0x0F	; 15
+     574:	f0 e0       	ldi	r31, 0x00	; 0
+     576:	20 e1       	ldi	r18, 0x10	; 16
+     578:	52 9f       	mul	r21, r18
+     57a:	e0 0d       	add	r30, r0
+     57c:	f1 1d       	adc	r31, r1
+     57e:	11 24       	eor	r1, r1
+     580:	e6 58       	subi	r30, 0x86	; 134
+     582:	fd 4f       	sbci	r31, 0xFD	; 253
+     584:	24 91       	lpm	r18, Z
+		b0 = ReadMem(SBox[(b0>>4) & 0xf][b0 & 0xf]);
+     586:	39 81       	ldd	r19, Y+1	; 0x01
+     588:	32 95       	swap	r19
+     58a:	3f 70       	andi	r19, 0x0F	; 15
+     58c:	e9 81       	ldd	r30, Y+1	; 0x01
+     58e:	ef 70       	andi	r30, 0x0F	; 15
+     590:	f0 e0       	ldi	r31, 0x00	; 0
+     592:	50 e1       	ldi	r21, 0x10	; 16
+     594:	35 9f       	mul	r19, r21
+     596:	e0 0d       	add	r30, r0
+     598:	f1 1d       	adc	r31, r1
+     59a:	11 24       	eor	r1, r1
+     59c:	e6 58       	subi	r30, 0x86	; 134
+     59e:	fd 4f       	sbci	r31, 0xFD	; 253
+     5a0:	e4 91       	lpm	r30, Z
+		RK[4] = ((uint32_t)b3 << 24) ^ ((uint32_t)b0 << 16) ^ ((uint32_t)b1 << 8) ^ (uint32_t)b2 ^ RK[0] ;
+     5a2:	50 e0       	ldi	r21, 0x00	; 0
+     5a4:	60 e0       	ldi	r22, 0x00	; 0
+     5a6:	70 e0       	ldi	r23, 0x00	; 0
+     5a8:	74 2f       	mov	r23, r20
+     5aa:	66 27       	eor	r22, r22
+     5ac:	55 27       	eor	r21, r21
+     5ae:	44 27       	eor	r20, r20
+     5b0:	6e 2b       	or	r22, r30
+     5b2:	52 2b       	or	r21, r18
+		b3 = (uint8_t)(RK[3]  & 0xff); 
+		b2 = (uint8_t)((RK[3]  >> 8)& 0xff); 
+		b1 = (uint8_t)((RK[3]  >> 16)& 0xff);
+		b0 = (uint8_t)((RK[3]  >> 24)& 0xff);
+		b3 = ReadMem( SBox[(b3>>4) & 0xf][b3 & 0xf]);
+		b2 = ReadMem(SBox[(b2>>4) & 0xf][b2 & 0xf]) ^ ReadMem(RCon[i]);
+     5b4:	98 27       	eor	r25, r24
+     5b6:	49 2b       	or	r20, r25
+		b1 = ReadMem(SBox[(b1>>4) & 0xf][b1 & 0xf]);	
+		b0 = ReadMem(SBox[(b0>>4) & 0xf][b0 & 0xf]);
+		RK[4] = ((uint32_t)b3 << 24) ^ ((uint32_t)b0 << 16) ^ ((uint32_t)b1 << 8) ^ (uint32_t)b2 ^ RK[0] ;
+     5b8:	44 26       	eor	r4, r20
+     5ba:	55 26       	eor	r5, r21
+     5bc:	66 26       	eor	r6, r22
+     5be:	77 26       	eor	r7, r23
+     5c0:	ab 85       	ldd	r26, Y+11	; 0x0b
+     5c2:	bc 85       	ldd	r27, Y+12	; 0x0c
+     5c4:	50 96       	adiw	r26, 0x10	; 16
+     5c6:	4d 92       	st	X+, r4
+     5c8:	5d 92       	st	X+, r5
+     5ca:	6d 92       	st	X+, r6
+     5cc:	7c 92       	st	X, r7
+     5ce:	53 97       	sbiw	r26, 0x13	; 19
+        	RK[5] = RK[1] ^ RK[4];
+     5d0:	84 24       	eor	r8, r4
+     5d2:	95 24       	eor	r9, r5
+     5d4:	a6 24       	eor	r10, r6
+     5d6:	b7 24       	eor	r11, r7
+     5d8:	54 96       	adiw	r26, 0x14	; 20
+     5da:	8d 92       	st	X+, r8
+     5dc:	9d 92       	st	X+, r9
+     5de:	ad 92       	st	X+, r10
+     5e0:	bc 92       	st	X, r11
+     5e2:	57 97       	sbiw	r26, 0x17	; 23
+        	RK[6] = RK[2] ^ RK[5];
+     5e4:	4d 81       	ldd	r20, Y+5	; 0x05
+     5e6:	5e 81       	ldd	r21, Y+6	; 0x06
+     5e8:	6f 81       	ldd	r22, Y+7	; 0x07
+     5ea:	78 85       	ldd	r23, Y+8	; 0x08
+     5ec:	84 26       	eor	r8, r20
+     5ee:	95 26       	eor	r9, r21
+     5f0:	a6 26       	eor	r10, r22
+     5f2:	b7 26       	eor	r11, r23
+     5f4:	58 96       	adiw	r26, 0x18	; 24
+     5f6:	8d 92       	st	X+, r8
+     5f8:	9d 92       	st	X+, r9
+     5fa:	ad 92       	st	X+, r10
+     5fc:	bc 92       	st	X, r11
+     5fe:	5b 97       	sbiw	r26, 0x1b	; 27
+        	RK[7] = RK[3] ^ RK[6];
+     600:	8c 24       	eor	r8, r12
+     602:	9d 24       	eor	r9, r13
+     604:	ae 24       	eor	r10, r14
+     606:	bf 24       	eor	r11, r15
+     608:	5c 96       	adiw	r26, 0x1c	; 28
+     60a:	8d 92       	st	X+, r8
+     60c:	9d 92       	st	X+, r9
+     60e:	ad 92       	st	X+, r10
+     610:	bc 92       	st	X, r11
+     612:	5f 97       	sbiw	r26, 0x1f	; 31
+     614:	bf ef       	ldi	r27, 0xFF	; 255
+     616:	2b 1a       	sub	r2, r27
+     618:	3b 0a       	sbc	r3, r27
+         	if (++i==10) 
+     61a:	ea e7       	ldi	r30, 0x7A	; 122
+     61c:	2e 16       	cp	r2, r30
+     61e:	e2 e0       	ldi	r30, 0x02	; 2
+     620:	3e 06       	cpc	r3, r30
+     622:	09 f0       	breq	.+2      	; 0x626 <aes128_init+0x204>
+     624:	57 cf       	rjmp	.-338    	; 0x4d4 <aes128_init+0xb2>
+			return (RK-36);
+		RK+=4;
+	}
+}
+     626:	89 85       	ldd	r24, Y+9	; 0x09
+     628:	9a 85       	ldd	r25, Y+10	; 0x0a
+     62a:	2c 96       	adiw	r28, 0x0c	; 12
+     62c:	0f b6       	in	r0, 0x3f	; 63
+     62e:	f8 94       	cli
+     630:	de bf       	out	0x3e, r29	; 62
+     632:	0f be       	out	0x3f, r0	; 63
+     634:	cd bf       	out	0x3d, r28	; 61
+     636:	df 91       	pop	r29
+     638:	cf 91       	pop	r28
+     63a:	1f 91       	pop	r17
+     63c:	0f 91       	pop	r16
+     63e:	ff 90       	pop	r15
+     640:	ef 90       	pop	r14
+     642:	df 90       	pop	r13
+     644:	cf 90       	pop	r12
+     646:	bf 90       	pop	r11
+     648:	af 90       	pop	r10
+     64a:	9f 90       	pop	r9
+     64c:	8f 90       	pop	r8
+     64e:	7f 90       	pop	r7
+     650:	6f 90       	pop	r6
+     652:	5f 90       	pop	r5
+     654:	4f 90       	pop	r4
+     656:	3f 90       	pop	r3
+     658:	2f 90       	pop	r2
+     65a:	08 95       	ret
+
+0000065c <aes128_encrypt>:
+void aes128_encrypt(void *buffer, void *param)
+{
+     65c:	2f 92       	push	r2
+     65e:	3f 92       	push	r3
+     660:	4f 92       	push	r4
+     662:	5f 92       	push	r5
+     664:	6f 92       	push	r6
+     666:	7f 92       	push	r7
+     668:	8f 92       	push	r8
+     66a:	9f 92       	push	r9
+     66c:	af 92       	push	r10
+     66e:	bf 92       	push	r11
+     670:	cf 92       	push	r12
+     672:	df 92       	push	r13
+     674:	ef 92       	push	r14
+     676:	ff 92       	push	r15
+     678:	0f 93       	push	r16
+     67a:	1f 93       	push	r17
+     67c:	cf 93       	push	r28
+     67e:	df 93       	push	r29
+     680:	cd b7       	in	r28, 0x3d	; 61
+     682:	de b7       	in	r29, 0x3e	; 62
+     684:	2b 97       	sbiw	r28, 0x0b	; 11
+     686:	0f b6       	in	r0, 0x3f	; 63
+     688:	f8 94       	cli
+     68a:	de bf       	out	0x3e, r29	; 62
+     68c:	0f be       	out	0x3f, r0	; 63
+     68e:	cd bf       	out	0x3d, r28	; 61
+     690:	8c 01       	movw	r16, r24
+     692:	7c 83       	std	Y+4, r23	; 0x04
+     694:	6b 83       	std	Y+3, r22	; 0x03
+	const uint8_t *RK = (uint8_t*)param;				//Darf man so machen?
+	uint8_t *IO8 = (uint8_t*)buffer;
+	uint8_t Temp[16] ;
+	uint8_t i = 1;
+	IO8[0] ^=RK[0];IO8[4] ^=RK[4]; IO8[8] ^=RK[8]; IO8[12] ^=RK[12];
+     696:	db 01       	movw	r26, r22
+     698:	8c 90       	ld	r8, X
+     69a:	fc 01       	movw	r30, r24
+     69c:	80 81       	ld	r24, Z
+     69e:	88 26       	eor	r8, r24
+     6a0:	80 82       	st	Z, r8
+     6a2:	14 96       	adiw	r26, 0x04	; 4
+     6a4:	bc 90       	ld	r11, X
+     6a6:	14 97       	sbiw	r26, 0x04	; 4
+     6a8:	84 81       	ldd	r24, Z+4	; 0x04
+     6aa:	b8 26       	eor	r11, r24
+     6ac:	b4 82       	std	Z+4, r11	; 0x04
+     6ae:	18 96       	adiw	r26, 0x08	; 8
+     6b0:	cc 90       	ld	r12, X
+     6b2:	18 97       	sbiw	r26, 0x08	; 8
+     6b4:	80 85       	ldd	r24, Z+8	; 0x08
+     6b6:	c8 26       	eor	r12, r24
+     6b8:	c0 86       	std	Z+8, r12	; 0x08
+     6ba:	1c 96       	adiw	r26, 0x0c	; 12
+     6bc:	9c 91       	ld	r25, X
+     6be:	84 85       	ldd	r24, Z+12	; 0x0c
+     6c0:	98 27       	eor	r25, r24
+     6c2:	94 87       	std	Z+12, r25	; 0x0c
+	IO8[1] ^=RK[1];IO8[5] ^=RK[5]; IO8[9] ^=RK[9]; IO8[13] ^=RK[13];
+     6c4:	fb 01       	movw	r30, r22
+     6c6:	a1 81       	ldd	r26, Z+1	; 0x01
+     6c8:	f8 01       	movw	r30, r16
+     6ca:	81 81       	ldd	r24, Z+1	; 0x01
+     6cc:	a8 27       	eor	r26, r24
+     6ce:	ad 83       	std	Y+5, r26	; 0x05
+     6d0:	a1 83       	std	Z+1, r26	; 0x01
+     6d2:	db 01       	movw	r26, r22
+     6d4:	15 96       	adiw	r26, 0x05	; 5
+     6d6:	9c 90       	ld	r9, X
+     6d8:	15 97       	sbiw	r26, 0x05	; 5
+     6da:	85 81       	ldd	r24, Z+5	; 0x05
+     6dc:	98 26       	eor	r9, r24
+     6de:	95 82       	std	Z+5, r9	; 0x05
+     6e0:	19 96       	adiw	r26, 0x09	; 9
+     6e2:	dc 90       	ld	r13, X
+     6e4:	19 97       	sbiw	r26, 0x09	; 9
+     6e6:	81 85       	ldd	r24, Z+9	; 0x09
+     6e8:	d8 26       	eor	r13, r24
+     6ea:	d1 86       	std	Z+9, r13	; 0x09
+     6ec:	1d 96       	adiw	r26, 0x0d	; 13
+     6ee:	3c 91       	ld	r19, X
+     6f0:	1d 97       	sbiw	r26, 0x0d	; 13
+     6f2:	85 85       	ldd	r24, Z+13	; 0x0d
+     6f4:	38 27       	eor	r19, r24
+     6f6:	35 87       	std	Z+13, r19	; 0x0d
+	IO8[2] ^=RK[2];IO8[6] ^=RK[6];IO8[10] ^=RK[10];IO8[14] ^=RK[14];
+     6f8:	12 96       	adiw	r26, 0x02	; 2
+     6fa:	2c 91       	ld	r18, X
+     6fc:	12 97       	sbiw	r26, 0x02	; 2
+     6fe:	82 81       	ldd	r24, Z+2	; 0x02
+     700:	28 27       	eor	r18, r24
+     702:	2e 83       	std	Y+6, r18	; 0x06
+     704:	22 83       	std	Z+2, r18	; 0x02
+     706:	16 96       	adiw	r26, 0x06	; 6
+     708:	5c 90       	ld	r5, X
+     70a:	16 97       	sbiw	r26, 0x06	; 6
+     70c:	86 81       	ldd	r24, Z+6	; 0x06
+     70e:	58 26       	eor	r5, r24
+     710:	56 82       	std	Z+6, r5	; 0x06
+     712:	1a 96       	adiw	r26, 0x0a	; 10
+     714:	ac 90       	ld	r10, X
+     716:	1a 97       	sbiw	r26, 0x0a	; 10
+     718:	82 85       	ldd	r24, Z+10	; 0x0a
+     71a:	a8 26       	eor	r10, r24
+     71c:	a2 86       	std	Z+10, r10	; 0x0a
+     71e:	1e 96       	adiw	r26, 0x0e	; 14
+     720:	2c 91       	ld	r18, X
+     722:	1e 97       	sbiw	r26, 0x0e	; 14
+     724:	86 85       	ldd	r24, Z+14	; 0x0e
+     726:	28 27       	eor	r18, r24
+     728:	26 87       	std	Z+14, r18	; 0x0e
+	IO8[3] ^=RK[3];IO8[7] ^=RK[7];IO8[11] ^=RK[11];IO8[15] ^=RK[15];
+     72a:	13 96       	adiw	r26, 0x03	; 3
+     72c:	6c 90       	ld	r6, X
+     72e:	13 97       	sbiw	r26, 0x03	; 3
+     730:	83 81       	ldd	r24, Z+3	; 0x03
+     732:	68 26       	eor	r6, r24
+     734:	63 82       	std	Z+3, r6	; 0x03
+     736:	17 96       	adiw	r26, 0x07	; 7
+     738:	7c 90       	ld	r7, X
+     73a:	17 97       	sbiw	r26, 0x07	; 7
+     73c:	87 81       	ldd	r24, Z+7	; 0x07
+     73e:	78 26       	eor	r7, r24
+     740:	77 82       	std	Z+7, r7	; 0x07
+     742:	1b 96       	adiw	r26, 0x0b	; 11
+     744:	6c 91       	ld	r22, X
+     746:	1b 97       	sbiw	r26, 0x0b	; 11
+     748:	83 85       	ldd	r24, Z+11	; 0x0b
+     74a:	86 27       	eor	r24, r22
+     74c:	83 87       	std	Z+11, r24	; 0x0b
+     74e:	1f 96       	adiw	r26, 0x0f	; 15
+     750:	6c 91       	ld	r22, X
+     752:	1f 97       	sbiw	r26, 0x0f	; 15
+     754:	47 85       	ldd	r20, Z+15	; 0x0f
+     756:	46 27       	eor	r20, r22
+     758:	47 87       	std	Z+15, r20	; 0x0f
+     75a:	d0 96       	adiw	r26, 0x30	; 48
+     75c:	6b 81       	ldd	r22, Y+3	; 0x03
+     75e:	7c 81       	ldd	r23, Y+4	; 0x04
+     760:	60 53       	subi	r22, 0x30	; 48
+     762:	7f 4f       	sbci	r23, 0xFF	; 255
+     764:	79 87       	std	Y+9, r23	; 0x09
+     766:	68 87       	std	Y+8, r22	; 0x08
+     768:	bb 87       	std	Y+11, r27	; 0x0b
+     76a:	aa 87       	std	Y+10, r26	; 0x0a
+     76c:	36 2c       	mov	r3, r6
+     76e:	25 2c       	mov	r2, r5
+     770:	57 2d       	mov	r21, r7
+     772:	64 2f       	mov	r22, r20
+     774:	4d 2d       	mov	r20, r13
+     776:	1a 83       	std	Y+2, r17	; 0x02
+     778:	09 83       	std	Y+1, r16	; 0x01
+     77a:	0c 2d       	mov	r16, r12
+     77c:	1b 2d       	mov	r17, r11
+	RK += 16; 
+while(1)
+{
+	Temp[0]  = ReadMem(Multi2[ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])])   
+     77e:	78 2d       	mov	r23, r8
+     780:	72 95       	swap	r23
+     782:	7f 70       	andi	r23, 0x0F	; 15
+     784:	a8 2d       	mov	r26, r8
+     786:	af 70       	andi	r26, 0x0F	; 15
+     788:	b0 e0       	ldi	r27, 0x00	; 0
+     78a:	e0 e1       	ldi	r30, 0x10	; 16
+     78c:	7e 9f       	mul	r23, r30
+     78e:	a0 0d       	add	r26, r0
+     790:	b1 1d       	adc	r27, r1
+     792:	11 24       	eor	r1, r1
+     794:	a6 58       	subi	r26, 0x86	; 134
+     796:	bd 4f       	sbci	r27, 0xFD	; 253
+     798:	fd 01       	movw	r30, r26
+     79a:	74 91       	lpm	r23, Z
+     79c:	e7 2f       	mov	r30, r23
+     79e:	f0 e0       	ldi	r31, 0x00	; 0
+     7a0:	e0 59       	subi	r30, 0x90	; 144
+     7a2:	fe 4f       	sbci	r31, 0xFE	; 254
+     7a4:	b4 90       	lpm	r11, Z
+     7a6:	79 2d       	mov	r23, r9
+     7a8:	72 95       	swap	r23
+     7aa:	7f 70       	andi	r23, 0x0F	; 15
+     7ac:	e9 2d       	mov	r30, r9
+     7ae:	ef 70       	andi	r30, 0x0F	; 15
+     7b0:	ce 2e       	mov	r12, r30
+     7b2:	d1 2c       	mov	r13, r1
+     7b4:	f0 e1       	ldi	r31, 0x10	; 16
+     7b6:	7f 9f       	mul	r23, r31
+     7b8:	c0 0c       	add	r12, r0
+     7ba:	d1 1c       	adc	r13, r1
+     7bc:	11 24       	eor	r1, r1
+     7be:	f6 01       	movw	r30, r12
+     7c0:	e6 58       	subi	r30, 0x86	; 134
+     7c2:	fd 4f       	sbci	r31, 0xFD	; 253
+     7c4:	6f 01       	movw	r12, r30
+     7c6:	74 91       	lpm	r23, Z
+     7c8:	e7 2f       	mov	r30, r23
+     7ca:	f0 e0       	ldi	r31, 0x00	; 0
+     7cc:	e0 59       	subi	r30, 0x90	; 144
+     7ce:	ff 4f       	sbci	r31, 0xFF	; 255
+     7d0:	94 90       	lpm	r9, Z
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[0];
+     7d2:	7a 2d       	mov	r23, r10
+     7d4:	72 95       	swap	r23
+     7d6:	7f 70       	andi	r23, 0x0F	; 15
+     7d8:	ea 2d       	mov	r30, r10
+     7da:	ef 70       	andi	r30, 0x0F	; 15
+     7dc:	ee 2e       	mov	r14, r30
+     7de:	f1 2c       	mov	r15, r1
+     7e0:	f0 e1       	ldi	r31, 0x10	; 16
+     7e2:	7f 9f       	mul	r23, r31
+     7e4:	e0 0c       	add	r14, r0
+     7e6:	f1 1c       	adc	r15, r1
+     7e8:	11 24       	eor	r1, r1
+     7ea:	f7 01       	movw	r30, r14
+     7ec:	e6 58       	subi	r30, 0x86	; 134
+     7ee:	fd 4f       	sbci	r31, 0xFD	; 253
+     7f0:	7f 01       	movw	r14, r30
+     7f2:	84 90       	lpm	r8, Z
+     7f4:	f6 2f       	mov	r31, r22
+     7f6:	f2 95       	swap	r31
+     7f8:	ff 70       	andi	r31, 0x0F	; 15
+     7fa:	6f 70       	andi	r22, 0x0F	; 15
+     7fc:	70 e0       	ldi	r23, 0x00	; 0
+     7fe:	e0 e1       	ldi	r30, 0x10	; 16
+     800:	fe 9f       	mul	r31, r30
+     802:	60 0d       	add	r22, r0
+     804:	71 1d       	adc	r23, r1
+     806:	11 24       	eor	r1, r1
+     808:	66 58       	subi	r22, 0x86	; 134
+     80a:	7d 4f       	sbci	r23, 0xFD	; 253
+     80c:	fb 01       	movw	r30, r22
+     80e:	a4 90       	lpm	r10, Z
+	IO8[2] ^=RK[2];IO8[6] ^=RK[6];IO8[10] ^=RK[10];IO8[14] ^=RK[14];
+	IO8[3] ^=RK[3];IO8[7] ^=RK[7];IO8[11] ^=RK[11];IO8[15] ^=RK[15];
+	RK += 16; 
+while(1)
+{
+	Temp[0]  = ReadMem(Multi2[ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])])   
+     810:	b9 24       	eor	r11, r9
+     812:	8b 24       	eor	r8, r11
+     814:	8a 24       	eor	r8, r10
+     816:	ea 85       	ldd	r30, Y+10	; 0x0a
+     818:	fb 85       	ldd	r31, Y+11	; 0x0b
+     81a:	b0 97       	sbiw	r30, 0x20	; 32
+     81c:	a0 80       	ld	r10, Z
+     81e:	a8 24       	eor	r10, r8
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[0];
+	Temp[1]  = ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])])   
+     820:	fd 01       	movw	r30, r26
+     822:	84 90       	lpm	r8, Z
+     824:	f6 01       	movw	r30, r12
+     826:	b4 90       	lpm	r11, Z
+     828:	eb 2d       	mov	r30, r11
+     82a:	f0 e0       	ldi	r31, 0x00	; 0
+     82c:	e0 59       	subi	r30, 0x90	; 144
+     82e:	fe 4f       	sbci	r31, 0xFE	; 254
+     830:	94 90       	lpm	r9, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[1];
+     832:	f7 01       	movw	r30, r14
+     834:	b4 90       	lpm	r11, Z
+     836:	eb 2d       	mov	r30, r11
+     838:	f0 e0       	ldi	r31, 0x00	; 0
+     83a:	e0 59       	subi	r30, 0x90	; 144
+     83c:	ff 4f       	sbci	r31, 0xFF	; 255
+     83e:	b4 90       	lpm	r11, Z
+     840:	fb 01       	movw	r30, r22
+     842:	44 90       	lpm	r4, Z
+	RK += 16; 
+while(1)
+{
+	Temp[0]  = ReadMem(Multi2[ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])])   
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[0];
+	Temp[1]  = ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])])   
+     844:	98 24       	eor	r9, r8
+     846:	b9 24       	eor	r11, r9
+     848:	b4 24       	eor	r11, r4
+     84a:	ea 85       	ldd	r30, Y+10	; 0x0a
+     84c:	fb 85       	ldd	r31, Y+11	; 0x0b
+     84e:	7f 97       	sbiw	r30, 0x1f	; 31
+     850:	40 80       	ld	r4, Z
+     852:	b4 24       	eor	r11, r4
+     854:	bf 82       	std	Y+7, r11	; 0x07
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[1];
+	Temp[2]  = ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])							^ ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])                   
+     856:	fd 01       	movw	r30, r26
+     858:	94 90       	lpm	r9, Z
+     85a:	f6 01       	movw	r30, r12
+     85c:	84 90       	lpm	r8, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[2];
+     85e:	f7 01       	movw	r30, r14
+     860:	b4 90       	lpm	r11, Z
+     862:	eb 2d       	mov	r30, r11
+     864:	f0 e0       	ldi	r31, 0x00	; 0
+     866:	e0 59       	subi	r30, 0x90	; 144
+     868:	fe 4f       	sbci	r31, 0xFE	; 254
+     86a:	b4 90       	lpm	r11, Z
+     86c:	fb 01       	movw	r30, r22
+     86e:	74 90       	lpm	r7, Z
+     870:	e7 2d       	mov	r30, r7
+     872:	f0 e0       	ldi	r31, 0x00	; 0
+     874:	e0 59       	subi	r30, 0x90	; 144
+     876:	ff 4f       	sbci	r31, 0xFF	; 255
+     878:	f4 91       	lpm	r31, Z
+{
+	Temp[0]  = ReadMem(Multi2[ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])])   
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[0];
+	Temp[1]  = ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])])   
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[1];
+	Temp[2]  = ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])							^ ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])                   
+     87a:	98 24       	eor	r9, r8
+     87c:	b9 24       	eor	r11, r9
+     87e:	bf 26       	eor	r11, r31
+     880:	ea 85       	ldd	r30, Y+10	; 0x0a
+     882:	fb 85       	ldd	r31, Y+11	; 0x0b
+     884:	7e 97       	sbiw	r30, 0x1e	; 30
+     886:	50 80       	ld	r5, Z
+     888:	5b 24       	eor	r5, r11
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[2];
+	Temp[3]  = ReadMem(Multi3[ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])])			^ ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])            
+     88a:	fd 01       	movw	r30, r26
+     88c:	a4 91       	lpm	r26, Z
+     88e:	b0 e0       	ldi	r27, 0x00	; 0
+     890:	fd 01       	movw	r30, r26
+     892:	e0 59       	subi	r30, 0x90	; 144
+     894:	ff 4f       	sbci	r31, 0xFF	; 255
+     896:	a4 91       	lpm	r26, Z
+     898:	f6 01       	movw	r30, r12
+     89a:	c4 90       	lpm	r12, Z
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[3];
+     89c:	f7 01       	movw	r30, r14
+     89e:	b4 91       	lpm	r27, Z
+     8a0:	fb 01       	movw	r30, r22
+     8a2:	64 91       	lpm	r22, Z
+     8a4:	e6 2f       	mov	r30, r22
+     8a6:	f0 e0       	ldi	r31, 0x00	; 0
+     8a8:	e0 59       	subi	r30, 0x90	; 144
+     8aa:	fe 4f       	sbci	r31, 0xFE	; 254
+     8ac:	64 91       	lpm	r22, Z
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[0];
+	Temp[1]  = ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])])   
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[1];
+	Temp[2]  = ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])							^ ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])                   
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[2];
+	Temp[3]  = ReadMem(Multi3[ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])])			^ ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])            
+     8ae:	ec 2d       	mov	r30, r12
+     8b0:	ea 27       	eor	r30, r26
+     8b2:	eb 27       	eor	r30, r27
+     8b4:	e6 27       	eor	r30, r22
+     8b6:	aa 85       	ldd	r26, Y+10	; 0x0a
+     8b8:	bb 85       	ldd	r27, Y+11	; 0x0b
+     8ba:	5d 97       	sbiw	r26, 0x1d	; 29
+     8bc:	7c 90       	ld	r7, X
+     8be:	7e 26       	eor	r7, r30
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[3];
+	Temp[4]  = ReadMem(Multi2[ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])]) 
+     8c0:	f1 2f       	mov	r31, r17
+     8c2:	f2 95       	swap	r31
+     8c4:	ff 70       	andi	r31, 0x0F	; 15
+     8c6:	1f 70       	andi	r17, 0x0F	; 15
+     8c8:	61 2f       	mov	r22, r17
+     8ca:	70 e0       	ldi	r23, 0x00	; 0
+     8cc:	a0 e1       	ldi	r26, 0x10	; 16
+     8ce:	fa 9f       	mul	r31, r26
+     8d0:	60 0d       	add	r22, r0
+     8d2:	71 1d       	adc	r23, r1
+     8d4:	11 24       	eor	r1, r1
+     8d6:	66 58       	subi	r22, 0x86	; 134
+     8d8:	7d 4f       	sbci	r23, 0xFD	; 253
+     8da:	fb 01       	movw	r30, r22
+     8dc:	a4 91       	lpm	r26, Z
+     8de:	ea 2f       	mov	r30, r26
+     8e0:	f0 e0       	ldi	r31, 0x00	; 0
+     8e2:	e0 59       	subi	r30, 0x90	; 144
+     8e4:	fe 4f       	sbci	r31, 0xFE	; 254
+     8e6:	14 91       	lpm	r17, Z
+     8e8:	f4 2f       	mov	r31, r20
+     8ea:	f2 95       	swap	r31
+     8ec:	ff 70       	andi	r31, 0x0F	; 15
+     8ee:	4f 70       	andi	r20, 0x0F	; 15
+     8f0:	e4 2e       	mov	r14, r20
+     8f2:	f1 2c       	mov	r15, r1
+     8f4:	47 01       	movw	r8, r14
+     8f6:	40 e1       	ldi	r20, 0x10	; 16
+     8f8:	f4 9f       	mul	r31, r20
+     8fa:	80 0c       	add	r8, r0
+     8fc:	91 1c       	adc	r9, r1
+     8fe:	11 24       	eor	r1, r1
+     900:	d4 01       	movw	r26, r8
+     902:	a6 58       	subi	r26, 0x86	; 134
+     904:	bd 4f       	sbci	r27, 0xFD	; 253
+     906:	7d 01       	movw	r14, r26
+     908:	fd 01       	movw	r30, r26
+     90a:	44 91       	lpm	r20, Z
+     90c:	e4 2f       	mov	r30, r20
+     90e:	f0 e0       	ldi	r31, 0x00	; 0
+     910:	e0 59       	subi	r30, 0x90	; 144
+     912:	ff 4f       	sbci	r31, 0xFF	; 255
+     914:	44 91       	lpm	r20, Z
+				^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[4];
+     916:	f2 2f       	mov	r31, r18
+     918:	f2 95       	swap	r31
+     91a:	ff 70       	andi	r31, 0x0F	; 15
+     91c:	2f 70       	andi	r18, 0x0F	; 15
+     91e:	a2 2f       	mov	r26, r18
+     920:	b0 e0       	ldi	r27, 0x00	; 0
+     922:	20 e1       	ldi	r18, 0x10	; 16
+     924:	f2 9f       	mul	r31, r18
+     926:	a0 0d       	add	r26, r0
+     928:	b1 1d       	adc	r27, r1
+     92a:	11 24       	eor	r1, r1
+     92c:	a6 58       	subi	r26, 0x86	; 134
+     92e:	bd 4f       	sbci	r27, 0xFD	; 253
+     930:	fd 01       	movw	r30, r26
+     932:	24 91       	lpm	r18, Z
+     934:	f3 2d       	mov	r31, r3
+     936:	f2 95       	swap	r31
+     938:	ff 70       	andi	r31, 0x0F	; 15
+     93a:	e3 2d       	mov	r30, r3
+     93c:	ef 70       	andi	r30, 0x0F	; 15
+     93e:	ce 2e       	mov	r12, r30
+     940:	d1 2c       	mov	r13, r1
+     942:	e0 e1       	ldi	r30, 0x10	; 16
+     944:	fe 9f       	mul	r31, r30
+     946:	c0 0c       	add	r12, r0
+     948:	d1 1c       	adc	r13, r1
+     94a:	11 24       	eor	r1, r1
+     94c:	f6 01       	movw	r30, r12
+     94e:	e6 58       	subi	r30, 0x86	; 134
+     950:	fd 4f       	sbci	r31, 0xFD	; 253
+     952:	6f 01       	movw	r12, r30
+     954:	b4 90       	lpm	r11, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])						^ RK[1];
+	Temp[2]  = ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])							^ ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])                   
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[2];
+	Temp[3]  = ReadMem(Multi3[ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])])			^ ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])            
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[3];
+	Temp[4]  = ReadMem(Multi2[ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])]) 
+     956:	14 27       	eor	r17, r20
+     958:	21 27       	eor	r18, r17
+     95a:	2b 25       	eor	r18, r11
+     95c:	ea 85       	ldd	r30, Y+10	; 0x0a
+     95e:	fb 85       	ldd	r31, Y+11	; 0x0b
+     960:	7c 97       	sbiw	r30, 0x1c	; 28
+     962:	b0 80       	ld	r11, Z
+     964:	b2 26       	eor	r11, r18
+				^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[4];
+	Temp[5]  = ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])]) 
+     966:	fb 01       	movw	r30, r22
+     968:	14 91       	lpm	r17, Z
+     96a:	f7 01       	movw	r30, r14
+     96c:	24 91       	lpm	r18, Z
+     96e:	e2 2f       	mov	r30, r18
+     970:	f0 e0       	ldi	r31, 0x00	; 0
+     972:	e0 59       	subi	r30, 0x90	; 144
+     974:	fe 4f       	sbci	r31, 0xFE	; 254
+     976:	44 91       	lpm	r20, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[5];
+     978:	fd 01       	movw	r30, r26
+     97a:	24 91       	lpm	r18, Z
+     97c:	e2 2f       	mov	r30, r18
+     97e:	f0 e0       	ldi	r31, 0x00	; 0
+     980:	e0 59       	subi	r30, 0x90	; 144
+     982:	ff 4f       	sbci	r31, 0xFF	; 255
+     984:	24 91       	lpm	r18, Z
+     986:	f6 01       	movw	r30, r12
+     988:	94 90       	lpm	r9, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[2];
+	Temp[3]  = ReadMem(Multi3[ReadMem(SBox[(IO8[0]>>4 ) & 0xf][IO8[0] & 0xf])])			^ ReadMem(SBox[(IO8[5]>>4 ) & 0xf][IO8[5] & 0xf])            
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[3];
+	Temp[4]  = ReadMem(Multi2[ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])]) 
+				^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[4];
+	Temp[5]  = ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])]) 
+     98a:	41 27       	eor	r20, r17
+     98c:	24 27       	eor	r18, r20
+     98e:	29 25       	eor	r18, r9
+     990:	ea 85       	ldd	r30, Y+10	; 0x0a
+     992:	fb 85       	ldd	r31, Y+11	; 0x0b
+     994:	7b 97       	sbiw	r30, 0x1b	; 27
+     996:	90 80       	ld	r9, Z
+     998:	92 26       	eor	r9, r18
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[5];
+	Temp[6]  = ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])							^ ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])      
+     99a:	fb 01       	movw	r30, r22
+     99c:	44 91       	lpm	r20, Z
+     99e:	f7 01       	movw	r30, r14
+     9a0:	14 91       	lpm	r17, Z
+	            ^ ReadMem(Multi2[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[6];
+     9a2:	fd 01       	movw	r30, r26
+     9a4:	24 91       	lpm	r18, Z
+     9a6:	e2 2f       	mov	r30, r18
+     9a8:	f0 e0       	ldi	r31, 0x00	; 0
+     9aa:	e0 59       	subi	r30, 0x90	; 144
+     9ac:	fe 4f       	sbci	r31, 0xFE	; 254
+     9ae:	24 91       	lpm	r18, Z
+     9b0:	f6 01       	movw	r30, r12
+     9b2:	84 90       	lpm	r8, Z
+     9b4:	e8 2d       	mov	r30, r8
+     9b6:	f0 e0       	ldi	r31, 0x00	; 0
+     9b8:	e0 59       	subi	r30, 0x90	; 144
+     9ba:	ff 4f       	sbci	r31, 0xFF	; 255
+     9bc:	f4 91       	lpm	r31, Z
+				^ ReadMem(SBox[(IO8[10]>>4 ) & 0xf][IO8[10] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[15]>>4 ) & 0xf][IO8[15] & 0xf])])	^ RK[3];
+	Temp[4]  = ReadMem(Multi2[ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])]) 
+				^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[4];
+	Temp[5]  = ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])]) 
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[5];
+	Temp[6]  = ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])							^ ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])      
+     9be:	41 27       	eor	r20, r17
+     9c0:	24 27       	eor	r18, r20
+     9c2:	2f 27       	eor	r18, r31
+     9c4:	ea 85       	ldd	r30, Y+10	; 0x0a
+     9c6:	fb 85       	ldd	r31, Y+11	; 0x0b
+     9c8:	7a 97       	sbiw	r30, 0x1a	; 26
+     9ca:	60 80       	ld	r6, Z
+     9cc:	62 26       	eor	r6, r18
+	            ^ ReadMem(Multi2[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[6];
+	Temp[7]  = ReadMem(Multi3[ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])])			^ ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])        
+     9ce:	fb 01       	movw	r30, r22
+     9d0:	64 91       	lpm	r22, Z
+     9d2:	70 e0       	ldi	r23, 0x00	; 0
+     9d4:	fb 01       	movw	r30, r22
+     9d6:	e0 59       	subi	r30, 0x90	; 144
+     9d8:	ff 4f       	sbci	r31, 0xFF	; 255
+     9da:	64 91       	lpm	r22, Z
+     9dc:	f7 01       	movw	r30, r14
+     9de:	e4 90       	lpm	r14, Z
+	            ^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[7];
+     9e0:	fd 01       	movw	r30, r26
+     9e2:	74 91       	lpm	r23, Z
+     9e4:	f6 01       	movw	r30, r12
+     9e6:	c4 90       	lpm	r12, Z
+     9e8:	ec 2d       	mov	r30, r12
+     9ea:	f0 e0       	ldi	r31, 0x00	; 0
+     9ec:	e0 59       	subi	r30, 0x90	; 144
+     9ee:	fe 4f       	sbci	r31, 0xFE	; 254
+     9f0:	c4 90       	lpm	r12, Z
+				^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[4];
+	Temp[5]  = ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])]) 
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[5];
+	Temp[6]  = ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])							^ ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])      
+	            ^ ReadMem(Multi2[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[6];
+	Temp[7]  = ReadMem(Multi3[ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])])			^ ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])        
+     9f2:	e6 26       	eor	r14, r22
+     9f4:	7e 25       	eor	r23, r14
+     9f6:	7c 25       	eor	r23, r12
+     9f8:	aa 85       	ldd	r26, Y+10	; 0x0a
+     9fa:	bb 85       	ldd	r27, Y+11	; 0x0b
+     9fc:	59 97       	sbiw	r26, 0x19	; 25
+     9fe:	fc 90       	ld	r15, X
+     a00:	f7 26       	eor	r15, r23
+	            ^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[7];
+	Temp[8]  = ReadMem(Multi2[ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])])  
+     a02:	20 2f       	mov	r18, r16
+     a04:	22 95       	swap	r18
+     a06:	2f 70       	andi	r18, 0x0F	; 15
+     a08:	0f 70       	andi	r16, 0x0F	; 15
+     a0a:	10 e0       	ldi	r17, 0x00	; 0
+     a0c:	f0 e1       	ldi	r31, 0x10	; 16
+     a0e:	2f 9f       	mul	r18, r31
+     a10:	00 0d       	add	r16, r0
+     a12:	11 1d       	adc	r17, r1
+     a14:	11 24       	eor	r1, r1
+     a16:	06 58       	subi	r16, 0x86	; 134
+     a18:	1d 4f       	sbci	r17, 0xFD	; 253
+     a1a:	f8 01       	movw	r30, r16
+     a1c:	24 91       	lpm	r18, Z
+     a1e:	e2 2f       	mov	r30, r18
+     a20:	f0 e0       	ldi	r31, 0x00	; 0
+     a22:	e0 59       	subi	r30, 0x90	; 144
+     a24:	fe 4f       	sbci	r31, 0xFE	; 254
+     a26:	74 91       	lpm	r23, Z
+     a28:	23 2f       	mov	r18, r19
+     a2a:	22 95       	swap	r18
+     a2c:	2f 70       	andi	r18, 0x0F	; 15
+     a2e:	3f 70       	andi	r19, 0x0F	; 15
+     a30:	a3 2f       	mov	r26, r19
+     a32:	b0 e0       	ldi	r27, 0x00	; 0
+     a34:	f0 e1       	ldi	r31, 0x10	; 16
+     a36:	2f 9f       	mul	r18, r31
+     a38:	a0 0d       	add	r26, r0
+     a3a:	b1 1d       	adc	r27, r1
+     a3c:	11 24       	eor	r1, r1
+     a3e:	a6 58       	subi	r26, 0x86	; 134
+     a40:	bd 4f       	sbci	r27, 0xFD	; 253
+     a42:	fd 01       	movw	r30, r26
+     a44:	24 91       	lpm	r18, Z
+     a46:	e2 2f       	mov	r30, r18
+     a48:	f0 e0       	ldi	r31, 0x00	; 0
+     a4a:	e0 59       	subi	r30, 0x90	; 144
+     a4c:	ff 4f       	sbci	r31, 0xFF	; 255
+     a4e:	e4 90       	lpm	r14, Z
+				^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[8];
+     a50:	4e 81       	ldd	r20, Y+6	; 0x06
+     a52:	42 95       	swap	r20
+     a54:	4f 70       	andi	r20, 0x0F	; 15
+     a56:	2e 81       	ldd	r18, Y+6	; 0x06
+     a58:	2f 70       	andi	r18, 0x0F	; 15
+     a5a:	30 e0       	ldi	r19, 0x00	; 0
+     a5c:	f0 e1       	ldi	r31, 0x10	; 16
+     a5e:	4f 9f       	mul	r20, r31
+     a60:	20 0d       	add	r18, r0
+     a62:	31 1d       	adc	r19, r1
+     a64:	11 24       	eor	r1, r1
+     a66:	26 58       	subi	r18, 0x86	; 134
+     a68:	3d 4f       	sbci	r19, 0xFD	; 253
+     a6a:	f9 01       	movw	r30, r18
+     a6c:	d4 90       	lpm	r13, Z
+     a6e:	65 2f       	mov	r22, r21
+     a70:	62 95       	swap	r22
+     a72:	6f 70       	andi	r22, 0x0F	; 15
+     a74:	5f 70       	andi	r21, 0x0F	; 15
+     a76:	45 2f       	mov	r20, r21
+     a78:	50 e0       	ldi	r21, 0x00	; 0
+     a7a:	f0 e1       	ldi	r31, 0x10	; 16
+     a7c:	6f 9f       	mul	r22, r31
+     a7e:	40 0d       	add	r20, r0
+     a80:	51 1d       	adc	r21, r1
+     a82:	11 24       	eor	r1, r1
+     a84:	46 58       	subi	r20, 0x86	; 134
+     a86:	5d 4f       	sbci	r21, 0xFD	; 253
+     a88:	fa 01       	movw	r30, r20
+     a8a:	64 91       	lpm	r22, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])						^ RK[5];
+	Temp[6]  = ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])							^ ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])      
+	            ^ ReadMem(Multi2[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[6];
+	Temp[7]  = ReadMem(Multi3[ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])])			^ ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])        
+	            ^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[7];
+	Temp[8]  = ReadMem(Multi2[ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])])  
+     a8c:	7e 25       	eor	r23, r14
+     a8e:	d7 26       	eor	r13, r23
+     a90:	d6 26       	eor	r13, r22
+     a92:	ea 85       	ldd	r30, Y+10	; 0x0a
+     a94:	fb 85       	ldd	r31, Y+11	; 0x0b
+     a96:	78 97       	sbiw	r30, 0x18	; 24
+     a98:	c0 80       	ld	r12, Z
+     a9a:	cd 24       	eor	r12, r13
+				^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[8];
+	Temp[9]  = ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])])  
+     a9c:	f8 01       	movw	r30, r16
+     a9e:	d4 90       	lpm	r13, Z
+     aa0:	fd 01       	movw	r30, r26
+     aa2:	64 91       	lpm	r22, Z
+     aa4:	e6 2f       	mov	r30, r22
+     aa6:	f0 e0       	ldi	r31, 0x00	; 0
+     aa8:	e0 59       	subi	r30, 0x90	; 144
+     aaa:	fe 4f       	sbci	r31, 0xFE	; 254
+     aac:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[9];
+     aae:	f9 01       	movw	r30, r18
+     ab0:	64 91       	lpm	r22, Z
+     ab2:	70 e0       	ldi	r23, 0x00	; 0
+     ab4:	fb 01       	movw	r30, r22
+     ab6:	e0 59       	subi	r30, 0x90	; 144
+     ab8:	ff 4f       	sbci	r31, 0xFF	; 255
+     aba:	64 91       	lpm	r22, Z
+     abc:	fa 01       	movw	r30, r20
+     abe:	74 91       	lpm	r23, Z
+	            ^ ReadMem(Multi2[ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[6];
+	Temp[7]  = ReadMem(Multi3[ReadMem(SBox[(IO8[4]>>4 ) & 0xf][IO8[4] & 0xf])])			^ ReadMem(SBox[(IO8[9]>>4 ) & 0xf][IO8[9] & 0xf])        
+	            ^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[7];
+	Temp[8]  = ReadMem(Multi2[ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])])  
+				^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[8];
+	Temp[9]  = ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])])  
+     ac0:	ed 24       	eor	r14, r13
+     ac2:	6e 25       	eor	r22, r14
+     ac4:	67 27       	eor	r22, r23
+     ac6:	ea 85       	ldd	r30, Y+10	; 0x0a
+     ac8:	fb 85       	ldd	r31, Y+11	; 0x0b
+     aca:	77 97       	sbiw	r30, 0x17	; 23
+     acc:	70 81       	ld	r23, Z
+     ace:	76 27       	eor	r23, r22
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[9];
+	Temp[10] = ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])							^ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])						
+     ad0:	f8 01       	movw	r30, r16
+     ad2:	d4 90       	lpm	r13, Z
+     ad4:	fd 01       	movw	r30, r26
+     ad6:	84 90       	lpm	r8, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[10];
+     ad8:	f9 01       	movw	r30, r18
+     ada:	64 91       	lpm	r22, Z
+     adc:	e6 2f       	mov	r30, r22
+     ade:	f0 e0       	ldi	r31, 0x00	; 0
+     ae0:	e0 59       	subi	r30, 0x90	; 144
+     ae2:	fe 4f       	sbci	r31, 0xFE	; 254
+     ae4:	e4 90       	lpm	r14, Z
+     ae6:	fa 01       	movw	r30, r20
+     ae8:	64 91       	lpm	r22, Z
+     aea:	e6 2f       	mov	r30, r22
+     aec:	f0 e0       	ldi	r31, 0x00	; 0
+     aee:	e0 59       	subi	r30, 0x90	; 144
+     af0:	ff 4f       	sbci	r31, 0xFF	; 255
+     af2:	f4 91       	lpm	r31, Z
+	            ^ ReadMem(SBox[(IO8[14]>>4 ) & 0xf][IO8[14] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[3]>>4 ) & 0xf][IO8[3] & 0xf])])		^ RK[7];
+	Temp[8]  = ReadMem(Multi2[ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])])			^ ReadMem(Multi3[ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])])  
+				^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[8];
+	Temp[9]  = ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])])  
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[9];
+	Temp[10] = ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])							^ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])						
+     af4:	d8 24       	eor	r13, r8
+     af6:	ed 24       	eor	r14, r13
+     af8:	ef 26       	eor	r14, r31
+     afa:	ea 85       	ldd	r30, Y+10	; 0x0a
+     afc:	fb 85       	ldd	r31, Y+11	; 0x0b
+     afe:	76 97       	sbiw	r30, 0x16	; 22
+     b00:	60 81       	ld	r22, Z
+     b02:	6e 25       	eor	r22, r14
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[10];
+	Temp[11] = ReadMem(Multi3[ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])])			^ ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])   
+     b04:	f8 01       	movw	r30, r16
+     b06:	04 91       	lpm	r16, Z
+     b08:	10 e0       	ldi	r17, 0x00	; 0
+     b0a:	f8 01       	movw	r30, r16
+     b0c:	e0 59       	subi	r30, 0x90	; 144
+     b0e:	ff 4f       	sbci	r31, 0xFF	; 255
+     b10:	04 91       	lpm	r16, Z
+     b12:	fd 01       	movw	r30, r26
+     b14:	a4 91       	lpm	r26, Z
+	            ^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[11];
+     b16:	f9 01       	movw	r30, r18
+     b18:	b4 91       	lpm	r27, Z
+     b1a:	fa 01       	movw	r30, r20
+     b1c:	44 91       	lpm	r20, Z
+     b1e:	e4 2f       	mov	r30, r20
+     b20:	f0 e0       	ldi	r31, 0x00	; 0
+     b22:	e0 59       	subi	r30, 0x90	; 144
+     b24:	fe 4f       	sbci	r31, 0xFE	; 254
+     b26:	44 91       	lpm	r20, Z
+				^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[8];
+	Temp[9]  = ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])])  
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[9];
+	Temp[10] = ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])							^ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])						
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[10];
+	Temp[11] = ReadMem(Multi3[ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])])			^ ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])   
+     b28:	ea 2f       	mov	r30, r26
+     b2a:	e0 27       	eor	r30, r16
+     b2c:	eb 27       	eor	r30, r27
+     b2e:	e4 27       	eor	r30, r20
+     b30:	aa 85       	ldd	r26, Y+10	; 0x0a
+     b32:	bb 85       	ldd	r27, Y+11	; 0x0b
+     b34:	55 97       	sbiw	r26, 0x15	; 21
+     b36:	dc 90       	ld	r13, X
+     b38:	de 26       	eor	r13, r30
+	            ^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[11];
+	Temp[12] = ReadMem(Multi2[ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])])
+     b3a:	29 2f       	mov	r18, r25
+     b3c:	22 95       	swap	r18
+     b3e:	2f 70       	andi	r18, 0x0F	; 15
+     b40:	9f 70       	andi	r25, 0x0F	; 15
+     b42:	49 2f       	mov	r20, r25
+     b44:	50 e0       	ldi	r21, 0x00	; 0
+     b46:	f0 e1       	ldi	r31, 0x10	; 16
+     b48:	2f 9f       	mul	r18, r31
+     b4a:	40 0d       	add	r20, r0
+     b4c:	51 1d       	adc	r21, r1
+     b4e:	11 24       	eor	r1, r1
+     b50:	46 58       	subi	r20, 0x86	; 134
+     b52:	5d 4f       	sbci	r21, 0xFD	; 253
+     b54:	fa 01       	movw	r30, r20
+     b56:	94 91       	lpm	r25, Z
+     b58:	e9 2f       	mov	r30, r25
+     b5a:	f0 e0       	ldi	r31, 0x00	; 0
+     b5c:	e0 59       	subi	r30, 0x90	; 144
+     b5e:	fe 4f       	sbci	r31, 0xFE	; 254
+     b60:	94 91       	lpm	r25, Z
+     b62:	2d 81       	ldd	r18, Y+5	; 0x05
+     b64:	22 95       	swap	r18
+     b66:	2f 70       	andi	r18, 0x0F	; 15
+     b68:	ad 81       	ldd	r26, Y+5	; 0x05
+     b6a:	af 70       	andi	r26, 0x0F	; 15
+     b6c:	b0 e0       	ldi	r27, 0x00	; 0
+     b6e:	f0 e1       	ldi	r31, 0x10	; 16
+     b70:	2f 9f       	mul	r18, r31
+     b72:	a0 0d       	add	r26, r0
+     b74:	b1 1d       	adc	r27, r1
+     b76:	11 24       	eor	r1, r1
+     b78:	a6 58       	subi	r26, 0x86	; 134
+     b7a:	bd 4f       	sbci	r27, 0xFD	; 253
+     b7c:	fd 01       	movw	r30, r26
+     b7e:	24 91       	lpm	r18, Z
+     b80:	e2 2f       	mov	r30, r18
+     b82:	f0 e0       	ldi	r31, 0x00	; 0
+     b84:	e0 59       	subi	r30, 0x90	; 144
+     b86:	ff 4f       	sbci	r31, 0xFF	; 255
+     b88:	e4 90       	lpm	r14, Z
+				^ ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])						^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[12];
+     b8a:	22 2d       	mov	r18, r2
+     b8c:	22 95       	swap	r18
+     b8e:	2f 70       	andi	r18, 0x0F	; 15
+     b90:	02 2d       	mov	r16, r2
+     b92:	0f 70       	andi	r16, 0x0F	; 15
+     b94:	10 e0       	ldi	r17, 0x00	; 0
+     b96:	f0 e1       	ldi	r31, 0x10	; 16
+     b98:	2f 9f       	mul	r18, r31
+     b9a:	00 0d       	add	r16, r0
+     b9c:	11 1d       	adc	r17, r1
+     b9e:	11 24       	eor	r1, r1
+     ba0:	06 58       	subi	r16, 0x86	; 134
+     ba2:	1d 4f       	sbci	r17, 0xFD	; 253
+     ba4:	f8 01       	movw	r30, r16
+     ba6:	84 90       	lpm	r8, Z
+     ba8:	f8 2f       	mov	r31, r24
+     baa:	f2 95       	swap	r31
+     bac:	ff 70       	andi	r31, 0x0F	; 15
+     bae:	8f 70       	andi	r24, 0x0F	; 15
+     bb0:	28 2f       	mov	r18, r24
+     bb2:	30 e0       	ldi	r19, 0x00	; 0
+     bb4:	80 e1       	ldi	r24, 0x10	; 16
+     bb6:	f8 9f       	mul	r31, r24
+     bb8:	20 0d       	add	r18, r0
+     bba:	31 1d       	adc	r19, r1
+     bbc:	11 24       	eor	r1, r1
+     bbe:	26 58       	subi	r18, 0x86	; 134
+     bc0:	3d 4f       	sbci	r19, 0xFD	; 253
+     bc2:	f9 01       	movw	r30, r18
+     bc4:	84 91       	lpm	r24, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])						^ RK[9];
+	Temp[10] = ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])							^ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])						
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[10];
+	Temp[11] = ReadMem(Multi3[ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])])			^ ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])   
+	            ^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[11];
+	Temp[12] = ReadMem(Multi2[ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])])
+     bc6:	9e 25       	eor	r25, r14
+     bc8:	89 26       	eor	r8, r25
+     bca:	88 26       	eor	r8, r24
+     bcc:	ea 85       	ldd	r30, Y+10	; 0x0a
+     bce:	fb 85       	ldd	r31, Y+11	; 0x0b
+     bd0:	74 97       	sbiw	r30, 0x14	; 20
+     bd2:	40 80       	ld	r4, Z
+     bd4:	48 24       	eor	r4, r8
+				^ ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])						^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[12];
+	Temp[13] = ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])])   
+     bd6:	fa 01       	movw	r30, r20
+     bd8:	84 90       	lpm	r8, Z
+     bda:	fd 01       	movw	r30, r26
+     bdc:	84 91       	lpm	r24, Z
+     bde:	e8 2f       	mov	r30, r24
+     be0:	f0 e0       	ldi	r31, 0x00	; 0
+     be2:	e0 59       	subi	r30, 0x90	; 144
+     be4:	fe 4f       	sbci	r31, 0xFE	; 254
+     be6:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])])		^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[13];
+     be8:	f8 01       	movw	r30, r16
+     bea:	84 91       	lpm	r24, Z
+     bec:	e8 2f       	mov	r30, r24
+     bee:	f0 e0       	ldi	r31, 0x00	; 0
+     bf0:	e0 59       	subi	r30, 0x90	; 144
+     bf2:	ff 4f       	sbci	r31, 0xFF	; 255
+     bf4:	94 91       	lpm	r25, Z
+     bf6:	f9 01       	movw	r30, r18
+     bf8:	84 91       	lpm	r24, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[10];
+	Temp[11] = ReadMem(Multi3[ReadMem(SBox[(IO8[8]>>4 ) & 0xf][IO8[8] & 0xf])])			^ ReadMem(SBox[(IO8[13]>>4 ) & 0xf][IO8[13] & 0xf])   
+	            ^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[11];
+	Temp[12] = ReadMem(Multi2[ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])])
+				^ ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])						^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[12];
+	Temp[13] = ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])])   
+     bfa:	e8 24       	eor	r14, r8
+     bfc:	9e 25       	eor	r25, r14
+     bfe:	98 27       	eor	r25, r24
+     c00:	ea 85       	ldd	r30, Y+10	; 0x0a
+     c02:	fb 85       	ldd	r31, Y+11	; 0x0b
+     c04:	73 97       	sbiw	r30, 0x13	; 19
+     c06:	80 81       	ld	r24, Z
+     c08:	89 27       	eor	r24, r25
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])])		^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[13];
+	Temp[14] = ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])						^ ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])      
+     c0a:	fa 01       	movw	r30, r20
+     c0c:	84 90       	lpm	r8, Z
+     c0e:	fd 01       	movw	r30, r26
+     c10:	34 90       	lpm	r3, Z
+                ^ ReadMem(Multi2[ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])])	^ RK[14];
+     c12:	f8 01       	movw	r30, r16
+     c14:	94 91       	lpm	r25, Z
+     c16:	e9 2f       	mov	r30, r25
+     c18:	f0 e0       	ldi	r31, 0x00	; 0
+     c1a:	e0 59       	subi	r30, 0x90	; 144
+     c1c:	fe 4f       	sbci	r31, 0xFE	; 254
+     c1e:	e4 90       	lpm	r14, Z
+     c20:	f9 01       	movw	r30, r18
+     c22:	94 91       	lpm	r25, Z
+     c24:	e9 2f       	mov	r30, r25
+     c26:	f0 e0       	ldi	r31, 0x00	; 0
+     c28:	e0 59       	subi	r30, 0x90	; 144
+     c2a:	ff 4f       	sbci	r31, 0xFF	; 255
+     c2c:	f4 91       	lpm	r31, Z
+	            ^ ReadMem(SBox[(IO8[2]>>4 ) & 0xf][IO8[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[7]>>4 ) & 0xf][IO8[7] & 0xf])])		^ RK[11];
+	Temp[12] = ReadMem(Multi2[ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])])
+				^ ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])						^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[12];
+	Temp[13] = ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])])   
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])])		^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[13];
+	Temp[14] = ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])						^ ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])      
+     c2e:	83 24       	eor	r8, r3
+     c30:	e8 24       	eor	r14, r8
+     c32:	ef 26       	eor	r14, r31
+     c34:	ea 85       	ldd	r30, Y+10	; 0x0a
+     c36:	fb 85       	ldd	r31, Y+11	; 0x0b
+     c38:	72 97       	sbiw	r30, 0x12	; 18
+     c3a:	90 81       	ld	r25, Z
+     c3c:	9e 25       	eor	r25, r14
+                ^ ReadMem(Multi2[ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])])	^ RK[14];
+	Temp[15] = ReadMem(Multi3[ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])])		^ ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])      
+     c3e:	fa 01       	movw	r30, r20
+     c40:	44 91       	lpm	r20, Z
+     c42:	e4 2f       	mov	r30, r20
+     c44:	f0 e0       	ldi	r31, 0x00	; 0
+     c46:	e0 59       	subi	r30, 0x90	; 144
+     c48:	ff 4f       	sbci	r31, 0xFF	; 255
+     c4a:	54 91       	lpm	r21, Z
+     c4c:	fd 01       	movw	r30, r26
+     c4e:	a4 91       	lpm	r26, Z
+               ^ ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])])	^ RK[15];
+     c50:	f8 01       	movw	r30, r16
+     c52:	24 90       	lpm	r2, Z
+     c54:	f9 01       	movw	r30, r18
+     c56:	24 91       	lpm	r18, Z
+     c58:	e2 2f       	mov	r30, r18
+     c5a:	f0 e0       	ldi	r31, 0x00	; 0
+     c5c:	e0 59       	subi	r30, 0x90	; 144
+     c5e:	fe 4f       	sbci	r31, 0xFE	; 254
+     c60:	24 91       	lpm	r18, Z
+				^ ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])						^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[12];
+	Temp[13] = ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])])   
+				^ ReadMem(Multi3[ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])])		^ ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])						^ RK[13];
+	Temp[14] = ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])						^ ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])      
+                ^ ReadMem(Multi2[ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])])	^ RK[14];
+	Temp[15] = ReadMem(Multi3[ReadMem(SBox[(IO8[12]>>4 ) & 0xf][IO8[12] & 0xf])])		^ ReadMem(SBox[(IO8[1]>>4 ) & 0xf][IO8[1] & 0xf])      
+     c62:	a5 27       	eor	r26, r21
+     c64:	2a 26       	eor	r2, r26
+     c66:	22 26       	eor	r2, r18
+     c68:	aa 85       	ldd	r26, Y+10	; 0x0a
+     c6a:	bb 85       	ldd	r27, Y+11	; 0x0b
+     c6c:	51 97       	sbiw	r26, 0x11	; 17
+     c6e:	4c 91       	ld	r20, X
+     c70:	42 25       	eor	r20, r2
+     c72:	2a 85       	ldd	r18, Y+10	; 0x0a
+     c74:	3b 85       	ldd	r19, Y+11	; 0x0b
+     c76:	20 5e       	subi	r18, 0xE0	; 224
+     c78:	3f 4f       	sbci	r19, 0xFF	; 255
+     c7a:	3b 87       	std	Y+11, r19	; 0x0b
+     c7c:	2a 87       	std	Y+10, r18	; 0x0a
+               ^ ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])])	^ RK[15];
+    RK += 16;	
+    i++;
+    
+    if (i==10) break;
+     c7e:	a8 85       	ldd	r26, Y+8	; 0x08
+     c80:	b9 85       	ldd	r27, Y+9	; 0x09
+     c82:	2a 17       	cp	r18, r26
+     c84:	3b 07       	cpc	r19, r27
+     c86:	09 f4       	brne	.+2      	; 0xc8a <aes128_encrypt+0x62e>
+     c88:	bf c2       	rjmp	.+1406   	; 0x1208 <__stack+0x109>
+	IO8[0]  = ReadMem(Multi2[ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])])
+     c8a:	5a 2d       	mov	r21, r10
+     c8c:	52 95       	swap	r21
+     c8e:	5f 70       	andi	r21, 0x0F	; 15
+     c90:	2a 2d       	mov	r18, r10
+     c92:	2f 70       	andi	r18, 0x0F	; 15
+     c94:	30 e0       	ldi	r19, 0x00	; 0
+     c96:	b0 e1       	ldi	r27, 0x10	; 16
+     c98:	5b 9f       	mul	r21, r27
+     c9a:	20 0d       	add	r18, r0
+     c9c:	31 1d       	adc	r19, r1
+     c9e:	11 24       	eor	r1, r1
+     ca0:	26 58       	subi	r18, 0x86	; 134
+     ca2:	3d 4f       	sbci	r19, 0xFD	; 253
+     ca4:	f9 01       	movw	r30, r18
+     ca6:	54 91       	lpm	r21, Z
+     ca8:	e5 2f       	mov	r30, r21
+     caa:	f0 e0       	ldi	r31, 0x00	; 0
+     cac:	e0 59       	subi	r30, 0x90	; 144
+     cae:	fe 4f       	sbci	r31, 0xFE	; 254
+     cb0:	e4 90       	lpm	r14, Z
+     cb2:	59 2d       	mov	r21, r9
+     cb4:	52 95       	swap	r21
+     cb6:	5f 70       	andi	r21, 0x0F	; 15
+     cb8:	09 2d       	mov	r16, r9
+     cba:	0f 70       	andi	r16, 0x0F	; 15
+     cbc:	10 e0       	ldi	r17, 0x00	; 0
+     cbe:	f0 e1       	ldi	r31, 0x10	; 16
+     cc0:	5f 9f       	mul	r21, r31
+     cc2:	00 0d       	add	r16, r0
+     cc4:	11 1d       	adc	r17, r1
+     cc6:	11 24       	eor	r1, r1
+     cc8:	06 58       	subi	r16, 0x86	; 134
+     cca:	1d 4f       	sbci	r17, 0xFD	; 253
+     ccc:	f8 01       	movw	r30, r16
+     cce:	54 91       	lpm	r21, Z
+     cd0:	e5 2f       	mov	r30, r21
+     cd2:	f0 e0       	ldi	r31, 0x00	; 0
+     cd4:	e0 59       	subi	r30, 0x90	; 144
+     cd6:	ff 4f       	sbci	r31, 0xFF	; 255
+     cd8:	a4 90       	lpm	r10, Z
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[0];
+     cda:	56 2f       	mov	r21, r22
+     cdc:	52 95       	swap	r21
+     cde:	5f 70       	andi	r21, 0x0F	; 15
+     ce0:	6f 70       	andi	r22, 0x0F	; 15
+     ce2:	a6 2f       	mov	r26, r22
+     ce4:	b0 e0       	ldi	r27, 0x00	; 0
+     ce6:	f0 e1       	ldi	r31, 0x10	; 16
+     ce8:	5f 9f       	mul	r21, r31
+     cea:	a0 0d       	add	r26, r0
+     cec:	b1 1d       	adc	r27, r1
+     cee:	11 24       	eor	r1, r1
+     cf0:	a6 58       	subi	r26, 0x86	; 134
+     cf2:	bd 4f       	sbci	r27, 0xFD	; 253
+     cf4:	fd 01       	movw	r30, r26
+     cf6:	64 91       	lpm	r22, Z
+     cf8:	f4 2f       	mov	r31, r20
+     cfa:	f2 95       	swap	r31
+     cfc:	ff 70       	andi	r31, 0x0F	; 15
+     cfe:	4f 70       	andi	r20, 0x0F	; 15
+     d00:	50 e0       	ldi	r21, 0x00	; 0
+     d02:	e0 e1       	ldi	r30, 0x10	; 16
+     d04:	fe 9f       	mul	r31, r30
+     d06:	40 0d       	add	r20, r0
+     d08:	51 1d       	adc	r21, r1
+     d0a:	11 24       	eor	r1, r1
+     d0c:	46 58       	subi	r20, 0x86	; 134
+     d0e:	5d 4f       	sbci	r21, 0xFD	; 253
+     d10:	fa 01       	movw	r30, r20
+     d12:	94 90       	lpm	r9, Z
+               ^ ReadMem(SBox[(IO8[6]>>4 ) & 0xf][IO8[6] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(IO8[11]>>4 ) & 0xf][IO8[11] & 0xf])])	^ RK[15];
+    RK += 16;	
+    i++;
+    
+    if (i==10) break;
+	IO8[0]  = ReadMem(Multi2[ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])])
+     d14:	ea 24       	eor	r14, r10
+     d16:	ea 85       	ldd	r30, Y+10	; 0x0a
+     d18:	fb 85       	ldd	r31, Y+11	; 0x0b
+     d1a:	f0 97       	sbiw	r30, 0x30	; 48
+     d1c:	80 80       	ld	r8, Z
+     d1e:	e8 24       	eor	r14, r8
+     d20:	8e 2c       	mov	r8, r14
+     d22:	86 26       	eor	r8, r22
+     d24:	89 24       	eor	r8, r9
+     d26:	e9 81       	ldd	r30, Y+1	; 0x01
+     d28:	fa 81       	ldd	r31, Y+2	; 0x02
+     d2a:	80 82       	st	Z, r8
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[0];
+	IO8[1]  = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])])
+     d2c:	f9 01       	movw	r30, r18
+     d2e:	94 90       	lpm	r9, Z
+     d30:	f8 01       	movw	r30, r16
+     d32:	64 91       	lpm	r22, Z
+     d34:	e6 2f       	mov	r30, r22
+     d36:	f0 e0       	ldi	r31, 0x00	; 0
+     d38:	e0 59       	subi	r30, 0x90	; 144
+     d3a:	fe 4f       	sbci	r31, 0xFE	; 254
+     d3c:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[1];
+     d3e:	fd 01       	movw	r30, r26
+     d40:	64 91       	lpm	r22, Z
+     d42:	e6 2f       	mov	r30, r22
+     d44:	f0 e0       	ldi	r31, 0x00	; 0
+     d46:	e0 59       	subi	r30, 0x90	; 144
+     d48:	ff 4f       	sbci	r31, 0xFF	; 255
+     d4a:	64 91       	lpm	r22, Z
+     d4c:	fa 01       	movw	r30, r20
+     d4e:	a4 90       	lpm	r10, Z
+    i++;
+    
+    if (i==10) break;
+	IO8[0]  = ReadMem(Multi2[ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])])
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[0];
+	IO8[1]  = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])])
+     d50:	e9 24       	eor	r14, r9
+     d52:	ea 85       	ldd	r30, Y+10	; 0x0a
+     d54:	fb 85       	ldd	r31, Y+11	; 0x0b
+     d56:	bf 97       	sbiw	r30, 0x2f	; 47
+     d58:	90 80       	ld	r9, Z
+     d5a:	e9 24       	eor	r14, r9
+     d5c:	6e 25       	eor	r22, r14
+     d5e:	6a 25       	eor	r22, r10
+     d60:	6d 83       	std	Y+5, r22	; 0x05
+     d62:	e9 81       	ldd	r30, Y+1	; 0x01
+     d64:	fa 81       	ldd	r31, Y+2	; 0x02
+     d66:	61 83       	std	Z+1, r22	; 0x01
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[1];
+	IO8[2]  = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])							^ ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])
+     d68:	f9 01       	movw	r30, r18
+     d6a:	94 90       	lpm	r9, Z
+     d6c:	f8 01       	movw	r30, r16
+     d6e:	a4 90       	lpm	r10, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[2];
+     d70:	fd 01       	movw	r30, r26
+     d72:	64 91       	lpm	r22, Z
+     d74:	e6 2f       	mov	r30, r22
+     d76:	f0 e0       	ldi	r31, 0x00	; 0
+     d78:	e0 59       	subi	r30, 0x90	; 144
+     d7a:	fe 4f       	sbci	r31, 0xFE	; 254
+     d7c:	64 91       	lpm	r22, Z
+     d7e:	fa 01       	movw	r30, r20
+     d80:	e4 90       	lpm	r14, Z
+     d82:	ee 2d       	mov	r30, r14
+     d84:	f0 e0       	ldi	r31, 0x00	; 0
+     d86:	e0 59       	subi	r30, 0x90	; 144
+     d88:	ff 4f       	sbci	r31, 0xFF	; 255
+     d8a:	e4 90       	lpm	r14, Z
+    if (i==10) break;
+	IO8[0]  = ReadMem(Multi2[ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])])
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[0];
+	IO8[1]  = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])])
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[1];
+	IO8[2]  = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])							^ ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])
+     d8c:	a9 24       	eor	r10, r9
+     d8e:	ea 85       	ldd	r30, Y+10	; 0x0a
+     d90:	fb 85       	ldd	r31, Y+11	; 0x0b
+     d92:	be 97       	sbiw	r30, 0x2e	; 46
+     d94:	90 80       	ld	r9, Z
+     d96:	a9 24       	eor	r10, r9
+     d98:	6a 25       	eor	r22, r10
+     d9a:	6e 25       	eor	r22, r14
+     d9c:	6e 83       	std	Y+6, r22	; 0x06
+     d9e:	e9 81       	ldd	r30, Y+1	; 0x01
+     da0:	fa 81       	ldd	r31, Y+2	; 0x02
+     da2:	62 83       	std	Z+2, r22	; 0x02
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[2];
+	IO8[3]  = ReadMem(Multi3[ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])])		^ ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])
+     da4:	f9 01       	movw	r30, r18
+     da6:	24 91       	lpm	r18, Z
+     da8:	30 e0       	ldi	r19, 0x00	; 0
+     daa:	f9 01       	movw	r30, r18
+     dac:	e0 59       	subi	r30, 0x90	; 144
+     dae:	ff 4f       	sbci	r31, 0xFF	; 255
+     db0:	24 91       	lpm	r18, Z
+     db2:	f8 01       	movw	r30, r16
+     db4:	04 91       	lpm	r16, Z
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[3];
+     db6:	fd 01       	movw	r30, r26
+     db8:	a4 91       	lpm	r26, Z
+     dba:	fa 01       	movw	r30, r20
+     dbc:	44 91       	lpm	r20, Z
+     dbe:	e4 2f       	mov	r30, r20
+     dc0:	f0 e0       	ldi	r31, 0x00	; 0
+     dc2:	e0 59       	subi	r30, 0x90	; 144
+     dc4:	fe 4f       	sbci	r31, 0xFE	; 254
+     dc6:	44 91       	lpm	r20, Z
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[0];
+	IO8[1]  = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])])
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[1];
+	IO8[2]  = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])							^ ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[2];
+	IO8[3]  = ReadMem(Multi3[ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])])		^ ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])
+     dc8:	02 27       	eor	r16, r18
+     dca:	ea 85       	ldd	r30, Y+10	; 0x0a
+     dcc:	fb 85       	ldd	r31, Y+11	; 0x0b
+     dce:	bd 97       	sbiw	r30, 0x2d	; 45
+     dd0:	30 81       	ld	r19, Z
+     dd2:	30 2e       	mov	r3, r16
+     dd4:	33 26       	eor	r3, r19
+     dd6:	a3 25       	eor	r26, r3
+     dd8:	3a 2e       	mov	r3, r26
+     dda:	34 26       	eor	r3, r20
+     ddc:	a9 81       	ldd	r26, Y+1	; 0x01
+     dde:	ba 81       	ldd	r27, Y+2	; 0x02
+     de0:	13 96       	adiw	r26, 0x03	; 3
+     de2:	3c 92       	st	X, r3
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[3];
+	IO8[4]  = ReadMem(Multi2[ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])])
+     de4:	2b 2d       	mov	r18, r11
+     de6:	22 95       	swap	r18
+     de8:	2f 70       	andi	r18, 0x0F	; 15
+     dea:	ab 2d       	mov	r26, r11
+     dec:	af 70       	andi	r26, 0x0F	; 15
+     dee:	b0 e0       	ldi	r27, 0x00	; 0
+     df0:	e0 e1       	ldi	r30, 0x10	; 16
+     df2:	2e 9f       	mul	r18, r30
+     df4:	a0 0d       	add	r26, r0
+     df6:	b1 1d       	adc	r27, r1
+     df8:	11 24       	eor	r1, r1
+     dfa:	a6 58       	subi	r26, 0x86	; 134
+     dfc:	bd 4f       	sbci	r27, 0xFD	; 253
+     dfe:	fd 01       	movw	r30, r26
+     e00:	24 91       	lpm	r18, Z
+     e02:	e2 2f       	mov	r30, r18
+     e04:	f0 e0       	ldi	r31, 0x00	; 0
+     e06:	e0 59       	subi	r30, 0x90	; 144
+     e08:	fe 4f       	sbci	r31, 0xFE	; 254
+     e0a:	04 91       	lpm	r16, Z
+     e0c:	27 2f       	mov	r18, r23
+     e0e:	22 95       	swap	r18
+     e10:	2f 70       	andi	r18, 0x0F	; 15
+     e12:	7f 70       	andi	r23, 0x0F	; 15
+     e14:	47 2f       	mov	r20, r23
+     e16:	50 e0       	ldi	r21, 0x00	; 0
+     e18:	f0 e1       	ldi	r31, 0x10	; 16
+     e1a:	2f 9f       	mul	r18, r31
+     e1c:	40 0d       	add	r20, r0
+     e1e:	51 1d       	adc	r21, r1
+     e20:	11 24       	eor	r1, r1
+     e22:	46 58       	subi	r20, 0x86	; 134
+     e24:	5d 4f       	sbci	r21, 0xFD	; 253
+     e26:	fa 01       	movw	r30, r20
+     e28:	24 91       	lpm	r18, Z
+     e2a:	e2 2f       	mov	r30, r18
+     e2c:	f0 e0       	ldi	r31, 0x00	; 0
+     e2e:	e0 59       	subi	r30, 0x90	; 144
+     e30:	ff 4f       	sbci	r31, 0xFF	; 255
+     e32:	b4 90       	lpm	r11, Z
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[4];
+     e34:	69 2f       	mov	r22, r25
+     e36:	62 95       	swap	r22
+     e38:	6f 70       	andi	r22, 0x0F	; 15
+     e3a:	9f 70       	andi	r25, 0x0F	; 15
+     e3c:	29 2f       	mov	r18, r25
+     e3e:	30 e0       	ldi	r19, 0x00	; 0
+     e40:	f0 e1       	ldi	r31, 0x10	; 16
+     e42:	6f 9f       	mul	r22, r31
+     e44:	20 0d       	add	r18, r0
+     e46:	31 1d       	adc	r19, r1
+     e48:	11 24       	eor	r1, r1
+     e4a:	26 58       	subi	r18, 0x86	; 134
+     e4c:	3d 4f       	sbci	r19, 0xFD	; 253
+     e4e:	f9 01       	movw	r30, r18
+     e50:	94 91       	lpm	r25, Z
+     e52:	f7 2d       	mov	r31, r7
+     e54:	f2 95       	swap	r31
+     e56:	ff 70       	andi	r31, 0x0F	; 15
+     e58:	67 2d       	mov	r22, r7
+     e5a:	6f 70       	andi	r22, 0x0F	; 15
+     e5c:	70 e0       	ldi	r23, 0x00	; 0
+     e5e:	e0 e1       	ldi	r30, 0x10	; 16
+     e60:	fe 9f       	mul	r31, r30
+     e62:	60 0d       	add	r22, r0
+     e64:	71 1d       	adc	r23, r1
+     e66:	11 24       	eor	r1, r1
+     e68:	66 58       	subi	r22, 0x86	; 134
+     e6a:	7d 4f       	sbci	r23, 0xFD	; 253
+     e6c:	fb 01       	movw	r30, r22
+     e6e:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])					^ RK[1];
+	IO8[2]  = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])							^ ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[2];
+	IO8[3]  = ReadMem(Multi3[ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])])		^ ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[3];
+	IO8[4]  = ReadMem(Multi2[ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])])
+     e70:	0b 25       	eor	r16, r11
+     e72:	ea 85       	ldd	r30, Y+10	; 0x0a
+     e74:	fb 85       	ldd	r31, Y+11	; 0x0b
+     e76:	bc 97       	sbiw	r30, 0x2c	; 44
+     e78:	10 81       	ld	r17, Z
+     e7a:	01 27       	eor	r16, r17
+     e7c:	10 2f       	mov	r17, r16
+     e7e:	19 27       	eor	r17, r25
+     e80:	1e 25       	eor	r17, r14
+     e82:	e9 81       	ldd	r30, Y+1	; 0x01
+     e84:	fa 81       	ldd	r31, Y+2	; 0x02
+     e86:	14 83       	std	Z+4, r17	; 0x04
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[4];
+	IO8[5]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])])
+     e88:	fd 01       	movw	r30, r26
+     e8a:	b4 90       	lpm	r11, Z
+     e8c:	fa 01       	movw	r30, r20
+     e8e:	94 91       	lpm	r25, Z
+     e90:	e9 2f       	mov	r30, r25
+     e92:	f0 e0       	ldi	r31, 0x00	; 0
+     e94:	e0 59       	subi	r30, 0x90	; 144
+     e96:	fe 4f       	sbci	r31, 0xFE	; 254
+     e98:	04 91       	lpm	r16, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[5];
+     e9a:	f9 01       	movw	r30, r18
+     e9c:	94 91       	lpm	r25, Z
+     e9e:	e9 2f       	mov	r30, r25
+     ea0:	f0 e0       	ldi	r31, 0x00	; 0
+     ea2:	e0 59       	subi	r30, 0x90	; 144
+     ea4:	ff 4f       	sbci	r31, 0xFF	; 255
+     ea6:	94 91       	lpm	r25, Z
+     ea8:	fb 01       	movw	r30, r22
+     eaa:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[2];
+	IO8[3]  = ReadMem(Multi3[ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])])		^ ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[3];
+	IO8[4]  = ReadMem(Multi2[ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])])
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[4];
+	IO8[5]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])])
+     eac:	0b 25       	eor	r16, r11
+     eae:	ea 85       	ldd	r30, Y+10	; 0x0a
+     eb0:	fb 85       	ldd	r31, Y+11	; 0x0b
+     eb2:	bb 97       	sbiw	r30, 0x2b	; 43
+     eb4:	b0 80       	ld	r11, Z
+     eb6:	0b 25       	eor	r16, r11
+     eb8:	90 2e       	mov	r9, r16
+     eba:	99 26       	eor	r9, r25
+     ebc:	9e 24       	eor	r9, r14
+     ebe:	e9 81       	ldd	r30, Y+1	; 0x01
+     ec0:	fa 81       	ldd	r31, Y+2	; 0x02
+     ec2:	95 82       	std	Z+5, r9	; 0x05
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[5];
+	IO8[6]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])							^ ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])
+     ec4:	fd 01       	movw	r30, r26
+     ec6:	b4 90       	lpm	r11, Z
+     ec8:	fa 01       	movw	r30, r20
+     eca:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[6];
+     ecc:	f9 01       	movw	r30, r18
+     ece:	94 91       	lpm	r25, Z
+     ed0:	e9 2f       	mov	r30, r25
+     ed2:	f0 e0       	ldi	r31, 0x00	; 0
+     ed4:	e0 59       	subi	r30, 0x90	; 144
+     ed6:	fe 4f       	sbci	r31, 0xFE	; 254
+     ed8:	94 91       	lpm	r25, Z
+     eda:	fb 01       	movw	r30, r22
+     edc:	04 91       	lpm	r16, Z
+     ede:	e0 2f       	mov	r30, r16
+     ee0:	f0 e0       	ldi	r31, 0x00	; 0
+     ee2:	e0 59       	subi	r30, 0x90	; 144
+     ee4:	ff 4f       	sbci	r31, 0xFF	; 255
+     ee6:	04 91       	lpm	r16, Z
+				^ ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])])	^ RK[3];
+	IO8[4]  = ReadMem(Multi2[ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])])
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[4];
+	IO8[5]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])])
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[5];
+	IO8[6]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])							^ ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])
+     ee8:	eb 24       	eor	r14, r11
+     eea:	ea 85       	ldd	r30, Y+10	; 0x0a
+     eec:	fb 85       	ldd	r31, Y+11	; 0x0b
+     eee:	ba 97       	sbiw	r30, 0x2a	; 42
+     ef0:	b0 80       	ld	r11, Z
+     ef2:	eb 24       	eor	r14, r11
+     ef4:	2e 2c       	mov	r2, r14
+     ef6:	29 26       	eor	r2, r25
+     ef8:	20 26       	eor	r2, r16
+     efa:	e9 81       	ldd	r30, Y+1	; 0x01
+     efc:	fa 81       	ldd	r31, Y+2	; 0x02
+     efe:	26 82       	std	Z+6, r2	; 0x06
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[6];
+	IO8[7]  = ReadMem(Multi3[ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])])		^ ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])
+     f00:	fd 01       	movw	r30, r26
+     f02:	a4 91       	lpm	r26, Z
+     f04:	b0 e0       	ldi	r27, 0x00	; 0
+     f06:	fd 01       	movw	r30, r26
+     f08:	e0 59       	subi	r30, 0x90	; 144
+     f0a:	ff 4f       	sbci	r31, 0xFF	; 255
+     f0c:	a4 91       	lpm	r26, Z
+     f0e:	fa 01       	movw	r30, r20
+     f10:	44 91       	lpm	r20, Z
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[7];
+     f12:	f9 01       	movw	r30, r18
+     f14:	24 91       	lpm	r18, Z
+     f16:	fb 01       	movw	r30, r22
+     f18:	64 91       	lpm	r22, Z
+     f1a:	e6 2f       	mov	r30, r22
+     f1c:	f0 e0       	ldi	r31, 0x00	; 0
+     f1e:	e0 59       	subi	r30, 0x90	; 144
+     f20:	fe 4f       	sbci	r31, 0xFE	; 254
+     f22:	64 91       	lpm	r22, Z
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[4];
+	IO8[5]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])])
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[5];
+	IO8[6]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])							^ ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[6];
+	IO8[7]  = ReadMem(Multi3[ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])])		^ ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])
+     f24:	4a 27       	eor	r20, r26
+     f26:	ea 85       	ldd	r30, Y+10	; 0x0a
+     f28:	fb 85       	ldd	r31, Y+11	; 0x0b
+     f2a:	b9 97       	sbiw	r30, 0x29	; 41
+     f2c:	90 81       	ld	r25, Z
+     f2e:	54 2f       	mov	r21, r20
+     f30:	59 27       	eor	r21, r25
+     f32:	25 27       	eor	r18, r21
+     f34:	52 2f       	mov	r21, r18
+     f36:	56 27       	eor	r21, r22
+     f38:	a9 81       	ldd	r26, Y+1	; 0x01
+     f3a:	ba 81       	ldd	r27, Y+2	; 0x02
+     f3c:	17 96       	adiw	r26, 0x07	; 7
+     f3e:	5c 93       	st	X, r21
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[7];
+	IO8[8]  = ReadMem(Multi2[ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])])
+     f40:	9c 2d       	mov	r25, r12
+     f42:	92 95       	swap	r25
+     f44:	9f 70       	andi	r25, 0x0F	; 15
+     f46:	6c 2d       	mov	r22, r12
+     f48:	6f 70       	andi	r22, 0x0F	; 15
+     f4a:	70 e0       	ldi	r23, 0x00	; 0
+     f4c:	b0 e1       	ldi	r27, 0x10	; 16
+     f4e:	9b 9f       	mul	r25, r27
+     f50:	60 0d       	add	r22, r0
+     f52:	71 1d       	adc	r23, r1
+     f54:	11 24       	eor	r1, r1
+     f56:	66 58       	subi	r22, 0x86	; 134
+     f58:	7d 4f       	sbci	r23, 0xFD	; 253
+     f5a:	fb 01       	movw	r30, r22
+     f5c:	94 91       	lpm	r25, Z
+     f5e:	e9 2f       	mov	r30, r25
+     f60:	f0 e0       	ldi	r31, 0x00	; 0
+     f62:	e0 59       	subi	r30, 0x90	; 144
+     f64:	fe 4f       	sbci	r31, 0xFE	; 254
+     f66:	44 91       	lpm	r20, Z
+     f68:	28 2f       	mov	r18, r24
+     f6a:	22 95       	swap	r18
+     f6c:	2f 70       	andi	r18, 0x0F	; 15
+     f6e:	8f 70       	andi	r24, 0x0F	; 15
+     f70:	90 e0       	ldi	r25, 0x00	; 0
+     f72:	f0 e1       	ldi	r31, 0x10	; 16
+     f74:	2f 9f       	mul	r18, r31
+     f76:	80 0d       	add	r24, r0
+     f78:	91 1d       	adc	r25, r1
+     f7a:	11 24       	eor	r1, r1
+     f7c:	86 58       	subi	r24, 0x86	; 134
+     f7e:	9d 4f       	sbci	r25, 0xFD	; 253
+     f80:	fc 01       	movw	r30, r24
+     f82:	24 91       	lpm	r18, Z
+     f84:	e2 2f       	mov	r30, r18
+     f86:	f0 e0       	ldi	r31, 0x00	; 0
+     f88:	e0 59       	subi	r30, 0x90	; 144
+     f8a:	ff 4f       	sbci	r31, 0xFF	; 255
+     f8c:	b4 90       	lpm	r11, Z
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[8];
+     f8e:	25 2d       	mov	r18, r5
+     f90:	22 95       	swap	r18
+     f92:	2f 70       	andi	r18, 0x0F	; 15
+     f94:	a5 2d       	mov	r26, r5
+     f96:	af 70       	andi	r26, 0x0F	; 15
+     f98:	b0 e0       	ldi	r27, 0x00	; 0
+     f9a:	f0 e1       	ldi	r31, 0x10	; 16
+     f9c:	2f 9f       	mul	r18, r31
+     f9e:	a0 0d       	add	r26, r0
+     fa0:	b1 1d       	adc	r27, r1
+     fa2:	11 24       	eor	r1, r1
+     fa4:	a6 58       	subi	r26, 0x86	; 134
+     fa6:	bd 4f       	sbci	r27, 0xFD	; 253
+     fa8:	fd 01       	movw	r30, r26
+     faa:	a4 90       	lpm	r10, Z
+     fac:	ff 2d       	mov	r31, r15
+     fae:	f2 95       	swap	r31
+     fb0:	ff 70       	andi	r31, 0x0F	; 15
+     fb2:	2f 2d       	mov	r18, r15
+     fb4:	2f 70       	andi	r18, 0x0F	; 15
+     fb6:	30 e0       	ldi	r19, 0x00	; 0
+     fb8:	e0 e1       	ldi	r30, 0x10	; 16
+     fba:	fe 9f       	mul	r31, r30
+     fbc:	20 0d       	add	r18, r0
+     fbe:	31 1d       	adc	r19, r1
+     fc0:	11 24       	eor	r1, r1
+     fc2:	26 58       	subi	r18, 0x86	; 134
+     fc4:	3d 4f       	sbci	r19, 0xFD	; 253
+     fc6:	f9 01       	movw	r30, r18
+     fc8:	f4 90       	lpm	r15, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])						^ RK[5];
+	IO8[6]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])							^ ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[6];
+	IO8[7]  = ReadMem(Multi3[ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])])		^ ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[7];
+	IO8[8]  = ReadMem(Multi2[ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])])
+     fca:	4b 25       	eor	r20, r11
+     fcc:	ea 85       	ldd	r30, Y+10	; 0x0a
+     fce:	fb 85       	ldd	r31, Y+11	; 0x0b
+     fd0:	b8 97       	sbiw	r30, 0x28	; 40
+     fd2:	00 81       	ld	r16, Z
+     fd4:	40 27       	eor	r20, r16
+     fd6:	04 2f       	mov	r16, r20
+     fd8:	0a 25       	eor	r16, r10
+     fda:	0f 25       	eor	r16, r15
+     fdc:	e9 81       	ldd	r30, Y+1	; 0x01
+     fde:	fa 81       	ldd	r31, Y+2	; 0x02
+     fe0:	00 87       	std	Z+8, r16	; 0x08
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[8];
+	IO8[9]  = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])])
+     fe2:	fb 01       	movw	r30, r22
+     fe4:	b4 90       	lpm	r11, Z
+     fe6:	fc 01       	movw	r30, r24
+     fe8:	44 91       	lpm	r20, Z
+     fea:	e4 2f       	mov	r30, r20
+     fec:	f0 e0       	ldi	r31, 0x00	; 0
+     fee:	e0 59       	subi	r30, 0x90	; 144
+     ff0:	fe 4f       	sbci	r31, 0xFE	; 254
+     ff2:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[9];
+     ff4:	fd 01       	movw	r30, r26
+     ff6:	44 91       	lpm	r20, Z
+     ff8:	e4 2f       	mov	r30, r20
+     ffa:	f0 e0       	ldi	r31, 0x00	; 0
+     ffc:	e0 59       	subi	r30, 0x90	; 144
+     ffe:	ff 4f       	sbci	r31, 0xFF	; 255
+    1000:	f4 90       	lpm	r15, Z
+    1002:	f9 01       	movw	r30, r18
+    1004:	c4 90       	lpm	r12, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[6];
+	IO8[7]  = ReadMem(Multi3[ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])])		^ ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[7];
+	IO8[8]  = ReadMem(Multi2[ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])])
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[8];
+	IO8[9]  = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])])
+    1006:	eb 24       	eor	r14, r11
+    1008:	ea 85       	ldd	r30, Y+10	; 0x0a
+    100a:	fb 85       	ldd	r31, Y+11	; 0x0b
+    100c:	b7 97       	sbiw	r30, 0x27	; 39
+    100e:	b0 80       	ld	r11, Z
+    1010:	eb 24       	eor	r14, r11
+    1012:	4e 2d       	mov	r20, r14
+    1014:	4f 25       	eor	r20, r15
+    1016:	4c 25       	eor	r20, r12
+    1018:	e9 81       	ldd	r30, Y+1	; 0x01
+    101a:	fa 81       	ldd	r31, Y+2	; 0x02
+    101c:	41 87       	std	Z+9, r20	; 0x09
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[9];
+	IO8[10] = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])							^ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])
+    101e:	fb 01       	movw	r30, r22
+    1020:	b4 90       	lpm	r11, Z
+    1022:	fc 01       	movw	r30, r24
+    1024:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[10];
+    1026:	fd 01       	movw	r30, r26
+    1028:	f4 90       	lpm	r15, Z
+    102a:	ef 2d       	mov	r30, r15
+    102c:	f0 e0       	ldi	r31, 0x00	; 0
+    102e:	e0 59       	subi	r30, 0x90	; 144
+    1030:	fe 4f       	sbci	r31, 0xFE	; 254
+    1032:	f4 90       	lpm	r15, Z
+    1034:	f9 01       	movw	r30, r18
+    1036:	c4 90       	lpm	r12, Z
+    1038:	ec 2d       	mov	r30, r12
+    103a:	f0 e0       	ldi	r31, 0x00	; 0
+    103c:	e0 59       	subi	r30, 0x90	; 144
+    103e:	ff 4f       	sbci	r31, 0xFF	; 255
+    1040:	c4 90       	lpm	r12, Z
+				^ ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])					^ ReadMem(Multi2[ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])])	^ RK[7];
+	IO8[8]  = ReadMem(Multi2[ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])])
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[8];
+	IO8[9]  = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])])
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[9];
+	IO8[10] = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])							^ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])
+    1042:	eb 24       	eor	r14, r11
+    1044:	ea 85       	ldd	r30, Y+10	; 0x0a
+    1046:	fb 85       	ldd	r31, Y+11	; 0x0b
+    1048:	b6 97       	sbiw	r30, 0x26	; 38
+    104a:	b0 80       	ld	r11, Z
+    104c:	eb 24       	eor	r14, r11
+    104e:	ae 2c       	mov	r10, r14
+    1050:	af 24       	eor	r10, r15
+    1052:	ac 24       	eor	r10, r12
+    1054:	e9 81       	ldd	r30, Y+1	; 0x01
+    1056:	fa 81       	ldd	r31, Y+2	; 0x02
+    1058:	a2 86       	std	Z+10, r10	; 0x0a
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[10];
+	IO8[11] = ReadMem(Multi3[ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])])		^ ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])
+    105a:	fb 01       	movw	r30, r22
+    105c:	64 91       	lpm	r22, Z
+    105e:	70 e0       	ldi	r23, 0x00	; 0
+    1060:	fb 01       	movw	r30, r22
+    1062:	e0 59       	subi	r30, 0x90	; 144
+    1064:	ff 4f       	sbci	r31, 0xFF	; 255
+    1066:	64 91       	lpm	r22, Z
+    1068:	fc 01       	movw	r30, r24
+    106a:	94 91       	lpm	r25, Z
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[11];
+    106c:	fd 01       	movw	r30, r26
+    106e:	a4 91       	lpm	r26, Z
+    1070:	f9 01       	movw	r30, r18
+    1072:	24 91       	lpm	r18, Z
+    1074:	e2 2f       	mov	r30, r18
+    1076:	f0 e0       	ldi	r31, 0x00	; 0
+    1078:	e0 59       	subi	r30, 0x90	; 144
+    107a:	fe 4f       	sbci	r31, 0xFE	; 254
+    107c:	24 91       	lpm	r18, Z
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[8];
+	IO8[9]  = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])							^ ReadMem(Multi2[ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])])
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[9];
+	IO8[10] = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])							^ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[10];
+	IO8[11] = ReadMem(Multi3[ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])])		^ ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])
+    107e:	86 2f       	mov	r24, r22
+    1080:	89 27       	eor	r24, r25
+    1082:	ea 85       	ldd	r30, Y+10	; 0x0a
+    1084:	fb 85       	ldd	r31, Y+11	; 0x0b
+    1086:	b5 97       	sbiw	r30, 0x25	; 37
+    1088:	30 81       	ld	r19, Z
+    108a:	83 27       	eor	r24, r19
+    108c:	a8 27       	eor	r26, r24
+    108e:	8a 2f       	mov	r24, r26
+    1090:	82 27       	eor	r24, r18
+    1092:	a9 81       	ldd	r26, Y+1	; 0x01
+    1094:	ba 81       	ldd	r27, Y+2	; 0x02
+    1096:	1b 96       	adiw	r26, 0x0b	; 11
+    1098:	8c 93       	st	X, r24
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[11];
+	IO8[12] = ReadMem(Multi2[ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])])
+    109a:	94 2d       	mov	r25, r4
+    109c:	92 95       	swap	r25
+    109e:	9f 70       	andi	r25, 0x0F	; 15
+    10a0:	64 2d       	mov	r22, r4
+    10a2:	6f 70       	andi	r22, 0x0F	; 15
+    10a4:	70 e0       	ldi	r23, 0x00	; 0
+    10a6:	b0 e1       	ldi	r27, 0x10	; 16
+    10a8:	9b 9f       	mul	r25, r27
+    10aa:	60 0d       	add	r22, r0
+    10ac:	71 1d       	adc	r23, r1
+    10ae:	11 24       	eor	r1, r1
+    10b0:	66 58       	subi	r22, 0x86	; 134
+    10b2:	7d 4f       	sbci	r23, 0xFD	; 253
+    10b4:	fb 01       	movw	r30, r22
+    10b6:	94 91       	lpm	r25, Z
+    10b8:	e9 2f       	mov	r30, r25
+    10ba:	f0 e0       	ldi	r31, 0x00	; 0
+    10bc:	e0 59       	subi	r30, 0x90	; 144
+    10be:	fe 4f       	sbci	r31, 0xFE	; 254
+    10c0:	34 91       	lpm	r19, Z
+    10c2:	9f 81       	ldd	r25, Y+7	; 0x07
+    10c4:	92 95       	swap	r25
+    10c6:	9f 70       	andi	r25, 0x0F	; 15
+    10c8:	ef 81       	ldd	r30, Y+7	; 0x07
+    10ca:	ef 70       	andi	r30, 0x0F	; 15
+    10cc:	4e 2e       	mov	r4, r30
+    10ce:	51 2c       	mov	r5, r1
+    10d0:	f2 01       	movw	r30, r4
+    10d2:	20 e1       	ldi	r18, 0x10	; 16
+    10d4:	92 9f       	mul	r25, r18
+    10d6:	e0 0d       	add	r30, r0
+    10d8:	f1 1d       	adc	r31, r1
+    10da:	11 24       	eor	r1, r1
+    10dc:	df 01       	movw	r26, r30
+    10de:	a6 58       	subi	r26, 0x86	; 134
+    10e0:	bd 4f       	sbci	r27, 0xFD	; 253
+    10e2:	2d 01       	movw	r4, r26
+    10e4:	fd 01       	movw	r30, r26
+    10e6:	94 91       	lpm	r25, Z
+    10e8:	e9 2f       	mov	r30, r25
+    10ea:	f0 e0       	ldi	r31, 0x00	; 0
+    10ec:	e0 59       	subi	r30, 0x90	; 144
+    10ee:	ff 4f       	sbci	r31, 0xFF	; 255
+    10f0:	f4 90       	lpm	r15, Z
+				^ ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])						^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[12];
+    10f2:	96 2d       	mov	r25, r6
+    10f4:	92 95       	swap	r25
+    10f6:	9f 70       	andi	r25, 0x0F	; 15
+    10f8:	26 2d       	mov	r18, r6
+    10fa:	2f 70       	andi	r18, 0x0F	; 15
+    10fc:	62 2e       	mov	r6, r18
+    10fe:	71 2c       	mov	r7, r1
+    1100:	f3 01       	movw	r30, r6
+    1102:	20 e1       	ldi	r18, 0x10	; 16
+    1104:	92 9f       	mul	r25, r18
+    1106:	e0 0d       	add	r30, r0
+    1108:	f1 1d       	adc	r31, r1
+    110a:	11 24       	eor	r1, r1
+    110c:	df 01       	movw	r26, r30
+    110e:	a6 58       	subi	r26, 0x86	; 134
+    1110:	bd 4f       	sbci	r27, 0xFD	; 253
+    1112:	3d 01       	movw	r6, r26
+    1114:	fd 01       	movw	r30, r26
+    1116:	e4 90       	lpm	r14, Z
+    1118:	9d 2d       	mov	r25, r13
+    111a:	92 95       	swap	r25
+    111c:	9f 70       	andi	r25, 0x0F	; 15
+    111e:	ad 2d       	mov	r26, r13
+    1120:	af 70       	andi	r26, 0x0F	; 15
+    1122:	b0 e0       	ldi	r27, 0x00	; 0
+    1124:	f0 e1       	ldi	r31, 0x10	; 16
+    1126:	9f 9f       	mul	r25, r31
+    1128:	a0 0d       	add	r26, r0
+    112a:	b1 1d       	adc	r27, r1
+    112c:	11 24       	eor	r1, r1
+    112e:	a6 58       	subi	r26, 0x86	; 134
+    1130:	bd 4f       	sbci	r27, 0xFD	; 253
+    1132:	fd 01       	movw	r30, r26
+    1134:	24 91       	lpm	r18, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])						^ RK[9];
+	IO8[10] = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])							^ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[10];
+	IO8[11] = ReadMem(Multi3[ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])])		^ ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[11];
+	IO8[12] = ReadMem(Multi2[ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])])
+    1136:	3f 25       	eor	r19, r15
+    1138:	ea 85       	ldd	r30, Y+10	; 0x0a
+    113a:	fb 85       	ldd	r31, Y+11	; 0x0b
+    113c:	b4 97       	sbiw	r30, 0x24	; 36
+    113e:	90 81       	ld	r25, Z
+    1140:	39 27       	eor	r19, r25
+    1142:	93 2f       	mov	r25, r19
+    1144:	9e 25       	eor	r25, r14
+    1146:	92 27       	eor	r25, r18
+    1148:	e9 81       	ldd	r30, Y+1	; 0x01
+    114a:	fa 81       	ldd	r31, Y+2	; 0x02
+    114c:	94 87       	std	Z+12, r25	; 0x0c
+				^ ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])						^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[12];
+	IO8[13] = ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])])
+    114e:	fb 01       	movw	r30, r22
+    1150:	d4 90       	lpm	r13, Z
+    1152:	f2 01       	movw	r30, r4
+    1154:	24 91       	lpm	r18, Z
+    1156:	e2 2f       	mov	r30, r18
+    1158:	f0 e0       	ldi	r31, 0x00	; 0
+    115a:	e0 59       	subi	r30, 0x90	; 144
+    115c:	fe 4f       	sbci	r31, 0xFE	; 254
+    115e:	f4 90       	lpm	r15, Z
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])])	^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[13];
+    1160:	f3 01       	movw	r30, r6
+    1162:	24 91       	lpm	r18, Z
+    1164:	30 e0       	ldi	r19, 0x00	; 0
+    1166:	f9 01       	movw	r30, r18
+    1168:	e0 59       	subi	r30, 0x90	; 144
+    116a:	ff 4f       	sbci	r31, 0xFF	; 255
+    116c:	24 91       	lpm	r18, Z
+    116e:	fd 01       	movw	r30, r26
+    1170:	e4 90       	lpm	r14, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[10];
+	IO8[11] = ReadMem(Multi3[ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])])		^ ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[11];
+	IO8[12] = ReadMem(Multi2[ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])])
+				^ ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])						^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[12];
+	IO8[13] = ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])])
+    1172:	fd 24       	eor	r15, r13
+    1174:	ea 85       	ldd	r30, Y+10	; 0x0a
+    1176:	fb 85       	ldd	r31, Y+11	; 0x0b
+    1178:	b3 97       	sbiw	r30, 0x23	; 35
+    117a:	d0 80       	ld	r13, Z
+    117c:	fd 24       	eor	r15, r13
+    117e:	3f 2d       	mov	r19, r15
+    1180:	32 27       	eor	r19, r18
+    1182:	3e 25       	eor	r19, r14
+    1184:	e9 81       	ldd	r30, Y+1	; 0x01
+    1186:	fa 81       	ldd	r31, Y+2	; 0x02
+    1188:	35 87       	std	Z+13, r19	; 0x0d
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])])	^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[13];
+	IO8[14] = ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])						^ ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])
+    118a:	fb 01       	movw	r30, r22
+    118c:	c4 90       	lpm	r12, Z
+    118e:	f2 01       	movw	r30, r4
+    1190:	d4 90       	lpm	r13, Z
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])])	^ RK[14];
+    1192:	f3 01       	movw	r30, r6
+    1194:	24 91       	lpm	r18, Z
+    1196:	e2 2f       	mov	r30, r18
+    1198:	f0 e0       	ldi	r31, 0x00	; 0
+    119a:	e0 59       	subi	r30, 0x90	; 144
+    119c:	fe 4f       	sbci	r31, 0xFE	; 254
+    119e:	f4 90       	lpm	r15, Z
+    11a0:	fd 01       	movw	r30, r26
+    11a2:	24 91       	lpm	r18, Z
+    11a4:	e2 2f       	mov	r30, r18
+    11a6:	f0 e0       	ldi	r31, 0x00	; 0
+    11a8:	e0 59       	subi	r30, 0x90	; 144
+    11aa:	ff 4f       	sbci	r31, 0xFF	; 255
+    11ac:	e4 90       	lpm	r14, Z
+				^ ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])])	^ RK[11];
+	IO8[12] = ReadMem(Multi2[ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])])		^ ReadMem(Multi3[ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])])
+				^ ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])						^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[12];
+	IO8[13] = ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])])
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])])	^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[13];
+	IO8[14] = ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])						^ ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])
+    11ae:	dc 24       	eor	r13, r12
+    11b0:	ea 85       	ldd	r30, Y+10	; 0x0a
+    11b2:	fb 85       	ldd	r31, Y+11	; 0x0b
+    11b4:	b2 97       	sbiw	r30, 0x22	; 34
+    11b6:	c0 80       	ld	r12, Z
+    11b8:	dc 24       	eor	r13, r12
+    11ba:	2d 2d       	mov	r18, r13
+    11bc:	2f 25       	eor	r18, r15
+    11be:	2e 25       	eor	r18, r14
+    11c0:	e9 81       	ldd	r30, Y+1	; 0x01
+    11c2:	fa 81       	ldd	r31, Y+2	; 0x02
+    11c4:	26 87       	std	Z+14, r18	; 0x0e
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])])	^ RK[14];
+	IO8[15] = ReadMem(Multi3[ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])])		^ ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])
+    11c6:	fb 01       	movw	r30, r22
+    11c8:	64 91       	lpm	r22, Z
+    11ca:	e6 2f       	mov	r30, r22
+    11cc:	f0 e0       	ldi	r31, 0x00	; 0
+    11ce:	e0 59       	subi	r30, 0x90	; 144
+    11d0:	ff 4f       	sbci	r31, 0xFF	; 255
+    11d2:	74 91       	lpm	r23, Z
+    11d4:	f2 01       	movw	r30, r4
+    11d6:	44 90       	lpm	r4, Z
+				^ ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])])	^ RK[15];
+    11d8:	f3 01       	movw	r30, r6
+    11da:	f4 90       	lpm	r15, Z
+    11dc:	fd 01       	movw	r30, r26
+    11de:	a4 91       	lpm	r26, Z
+    11e0:	ea 2f       	mov	r30, r26
+    11e2:	f0 e0       	ldi	r31, 0x00	; 0
+    11e4:	e0 59       	subi	r30, 0x90	; 144
+    11e6:	fe 4f       	sbci	r31, 0xFE	; 254
+    11e8:	f4 91       	lpm	r31, Z
+				^ ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])						^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[12];
+	IO8[13] = ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])])
+				^ ReadMem(Multi3[ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])])	^ ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])					^ RK[13];
+	IO8[14] = ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])						^ ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])
+				^ ReadMem(Multi2[ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])])	^ ReadMem(Multi3[ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])])	^ RK[14];
+	IO8[15] = ReadMem(Multi3[ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])])		^ ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])
+    11ea:	47 26       	eor	r4, r23
+    11ec:	aa 85       	ldd	r26, Y+10	; 0x0a
+    11ee:	bb 85       	ldd	r27, Y+11	; 0x0b
+    11f0:	91 97       	sbiw	r26, 0x21	; 33
+    11f2:	ac 91       	ld	r26, X
+    11f4:	64 2c       	mov	r6, r4
+    11f6:	6a 26       	eor	r6, r26
+    11f8:	6f 24       	eor	r6, r15
+    11fa:	66 2d       	mov	r22, r6
+    11fc:	6f 27       	eor	r22, r31
+    11fe:	a9 81       	ldd	r26, Y+1	; 0x01
+    1200:	ba 81       	ldd	r27, Y+2	; 0x02
+    1202:	1f 96       	adiw	r26, 0x0f	; 15
+    1204:	6c 93       	st	X, r22
+				^ ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])						^ ReadMem(Multi2[ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])])	^ RK[15];
+	RK += 16;
+	i++;
+}
+    1206:	bb ca       	rjmp	.-2698   	; 0x77e <aes128_encrypt+0x122>
+    1208:	2f 2c       	mov	r2, r15
+    120a:	f7 2e       	mov	r15, r23
+    120c:	2d 2d       	mov	r18, r13
+    120e:	d6 2e       	mov	r13, r22
+    1210:	78 2f       	mov	r23, r24
+    1212:	69 2f       	mov	r22, r25
+    1214:	09 81       	ldd	r16, Y+1	; 0x01
+    1216:	1a 81       	ldd	r17, Y+2	; 0x02
+// 10 Round
+	IO8[0] = ReadMem(SBox[(Temp[0]>>4 ) & 0xf][Temp[0] & 0xf])		^ RK[0]; IO8[4]  = ReadMem(SBox[(Temp[4]>>4 ) & 0xf][Temp[4] & 0xf])	^ RK[4];  
+    1218:	9a 2d       	mov	r25, r10
+    121a:	92 95       	swap	r25
+    121c:	9f 70       	andi	r25, 0x0F	; 15
+    121e:	8a 2d       	mov	r24, r10
+    1220:	8f 70       	andi	r24, 0x0F	; 15
+    1222:	e8 2f       	mov	r30, r24
+    1224:	f0 e0       	ldi	r31, 0x00	; 0
+    1226:	b0 e1       	ldi	r27, 0x10	; 16
+    1228:	9b 9f       	mul	r25, r27
+    122a:	e0 0d       	add	r30, r0
+    122c:	f1 1d       	adc	r31, r1
+    122e:	11 24       	eor	r1, r1
+    1230:	e6 58       	subi	r30, 0x86	; 134
+    1232:	fd 4f       	sbci	r31, 0xFD	; 253
+    1234:	94 91       	lpm	r25, Z
+    1236:	ab 81       	ldd	r26, Y+3	; 0x03
+    1238:	bc 81       	ldd	r27, Y+4	; 0x04
+    123a:	a0 56       	subi	r26, 0x60	; 96
+    123c:	bf 4f       	sbci	r27, 0xFF	; 255
+    123e:	8c 91       	ld	r24, X
+    1240:	e9 2f       	mov	r30, r25
+    1242:	e8 27       	eor	r30, r24
+    1244:	d8 01       	movw	r26, r16
+    1246:	ec 93       	st	X, r30
+    1248:	8b 2d       	mov	r24, r11
+    124a:	82 95       	swap	r24
+    124c:	8f 70       	andi	r24, 0x0F	; 15
+    124e:	ab 2d       	mov	r26, r11
+    1250:	af 70       	andi	r26, 0x0F	; 15
+    1252:	ea 2f       	mov	r30, r26
+    1254:	f0 e0       	ldi	r31, 0x00	; 0
+    1256:	b0 e1       	ldi	r27, 0x10	; 16
+    1258:	8b 9f       	mul	r24, r27
+    125a:	e0 0d       	add	r30, r0
+    125c:	f1 1d       	adc	r31, r1
+    125e:	11 24       	eor	r1, r1
+    1260:	e6 58       	subi	r30, 0x86	; 134
+    1262:	fd 4f       	sbci	r31, 0xFD	; 253
+    1264:	b4 91       	lpm	r27, Z
+    1266:	8b 81       	ldd	r24, Y+3	; 0x03
+    1268:	9c 81       	ldd	r25, Y+4	; 0x04
+    126a:	8c 55       	subi	r24, 0x5C	; 92
+    126c:	9f 4f       	sbci	r25, 0xFF	; 255
+    126e:	fc 01       	movw	r30, r24
+    1270:	a0 81       	ld	r26, Z
+    1272:	eb 2f       	mov	r30, r27
+    1274:	ea 27       	eor	r30, r26
+    1276:	d8 01       	movw	r26, r16
+    1278:	14 96       	adiw	r26, 0x04	; 4
+    127a:	ec 93       	st	X, r30
+	IO8[8] = ReadMem(SBox[(Temp[8]>>4 ) & 0xf][Temp[8] & 0xf])		^ RK[8]; IO8[12] = ReadMem(SBox[(Temp[12]>>4 ) & 0xf][Temp[12] & 0xf])  ^ RK[12];
+    127c:	9c 2d       	mov	r25, r12
+    127e:	92 95       	swap	r25
+    1280:	9f 70       	andi	r25, 0x0F	; 15
+    1282:	8c 2d       	mov	r24, r12
+    1284:	8f 70       	andi	r24, 0x0F	; 15
+    1286:	e8 2f       	mov	r30, r24
+    1288:	f0 e0       	ldi	r31, 0x00	; 0
+    128a:	b0 e1       	ldi	r27, 0x10	; 16
+    128c:	9b 9f       	mul	r25, r27
+    128e:	e0 0d       	add	r30, r0
+    1290:	f1 1d       	adc	r31, r1
+    1292:	11 24       	eor	r1, r1
+    1294:	e6 58       	subi	r30, 0x86	; 134
+    1296:	fd 4f       	sbci	r31, 0xFD	; 253
+    1298:	94 91       	lpm	r25, Z
+    129a:	ab 81       	ldd	r26, Y+3	; 0x03
+    129c:	bc 81       	ldd	r27, Y+4	; 0x04
+    129e:	a8 55       	subi	r26, 0x58	; 88
+    12a0:	bf 4f       	sbci	r27, 0xFF	; 255
+    12a2:	8c 91       	ld	r24, X
+    12a4:	e9 2f       	mov	r30, r25
+    12a6:	e8 27       	eor	r30, r24
+    12a8:	d8 01       	movw	r26, r16
+    12aa:	18 96       	adiw	r26, 0x08	; 8
+    12ac:	ec 93       	st	X, r30
+    12ae:	94 2d       	mov	r25, r4
+    12b0:	92 95       	swap	r25
+    12b2:	9f 70       	andi	r25, 0x0F	; 15
+    12b4:	84 2d       	mov	r24, r4
+    12b6:	8f 70       	andi	r24, 0x0F	; 15
+    12b8:	e8 2f       	mov	r30, r24
+    12ba:	f0 e0       	ldi	r31, 0x00	; 0
+    12bc:	b0 e1       	ldi	r27, 0x10	; 16
+    12be:	9b 9f       	mul	r25, r27
+    12c0:	e0 0d       	add	r30, r0
+    12c2:	f1 1d       	adc	r31, r1
+    12c4:	11 24       	eor	r1, r1
+    12c6:	e6 58       	subi	r30, 0x86	; 134
+    12c8:	fd 4f       	sbci	r31, 0xFD	; 253
+    12ca:	94 91       	lpm	r25, Z
+    12cc:	ab 81       	ldd	r26, Y+3	; 0x03
+    12ce:	bc 81       	ldd	r27, Y+4	; 0x04
+    12d0:	a4 55       	subi	r26, 0x54	; 84
+    12d2:	bf 4f       	sbci	r27, 0xFF	; 255
+    12d4:	8c 91       	ld	r24, X
+    12d6:	e9 2f       	mov	r30, r25
+    12d8:	e8 27       	eor	r30, r24
+    12da:	d8 01       	movw	r26, r16
+    12dc:	1c 96       	adiw	r26, 0x0c	; 12
+    12de:	ec 93       	st	X, r30
+	
+	IO8[1] = ReadMem(SBox[(Temp[5]>>4 ) & 0xf][Temp[5] & 0xf])		^ RK[1]; IO8[5]  = ReadMem(SBox[(Temp[9]>>4 ) & 0xf][Temp[9] & 0xf])	^ RK[5];
+    12e0:	99 2d       	mov	r25, r9
+    12e2:	92 95       	swap	r25
+    12e4:	9f 70       	andi	r25, 0x0F	; 15
+    12e6:	89 2d       	mov	r24, r9
+    12e8:	8f 70       	andi	r24, 0x0F	; 15
+    12ea:	e8 2f       	mov	r30, r24
+    12ec:	f0 e0       	ldi	r31, 0x00	; 0
+    12ee:	b0 e1       	ldi	r27, 0x10	; 16
+    12f0:	9b 9f       	mul	r25, r27
+    12f2:	e0 0d       	add	r30, r0
+    12f4:	f1 1d       	adc	r31, r1
+    12f6:	11 24       	eor	r1, r1
+    12f8:	e6 58       	subi	r30, 0x86	; 134
+    12fa:	fd 4f       	sbci	r31, 0xFD	; 253
+    12fc:	94 91       	lpm	r25, Z
+    12fe:	ab 81       	ldd	r26, Y+3	; 0x03
+    1300:	bc 81       	ldd	r27, Y+4	; 0x04
+    1302:	af 55       	subi	r26, 0x5F	; 95
+    1304:	bf 4f       	sbci	r27, 0xFF	; 255
+    1306:	8c 91       	ld	r24, X
+    1308:	e9 2f       	mov	r30, r25
+    130a:	e8 27       	eor	r30, r24
+    130c:	d8 01       	movw	r26, r16
+    130e:	11 96       	adiw	r26, 0x01	; 1
+    1310:	ec 93       	st	X, r30
+    1312:	8f 2d       	mov	r24, r15
+    1314:	82 95       	swap	r24
+    1316:	8f 70       	andi	r24, 0x0F	; 15
+    1318:	ef 2d       	mov	r30, r15
+    131a:	ef 70       	andi	r30, 0x0F	; 15
+    131c:	f0 e0       	ldi	r31, 0x00	; 0
+    131e:	b0 e1       	ldi	r27, 0x10	; 16
+    1320:	8b 9f       	mul	r24, r27
+    1322:	e0 0d       	add	r30, r0
+    1324:	f1 1d       	adc	r31, r1
+    1326:	11 24       	eor	r1, r1
+    1328:	e6 58       	subi	r30, 0x86	; 134
+    132a:	fd 4f       	sbci	r31, 0xFD	; 253
+    132c:	94 91       	lpm	r25, Z
+    132e:	ab 81       	ldd	r26, Y+3	; 0x03
+    1330:	bc 81       	ldd	r27, Y+4	; 0x04
+    1332:	ab 55       	subi	r26, 0x5B	; 91
+    1334:	bf 4f       	sbci	r27, 0xFF	; 255
+    1336:	8c 91       	ld	r24, X
+    1338:	e9 2f       	mov	r30, r25
+    133a:	e8 27       	eor	r30, r24
+    133c:	d8 01       	movw	r26, r16
+    133e:	15 96       	adiw	r26, 0x05	; 5
+    1340:	ec 93       	st	X, r30
+	IO8[9] = ReadMem(SBox[(Temp[13]>>4 ) & 0xf][Temp[13] & 0xf])	^ RK[9]; IO8[13] = ReadMem(SBox[(Temp[1]>>4 ) & 0xf][Temp[1] & 0xf])	^ RK[13];
+    1342:	87 2f       	mov	r24, r23
+    1344:	82 95       	swap	r24
+    1346:	8f 70       	andi	r24, 0x0F	; 15
+    1348:	7f 70       	andi	r23, 0x0F	; 15
+    134a:	e7 2f       	mov	r30, r23
+    134c:	f0 e0       	ldi	r31, 0x00	; 0
+    134e:	b0 e1       	ldi	r27, 0x10	; 16
+    1350:	8b 9f       	mul	r24, r27
+    1352:	e0 0d       	add	r30, r0
+    1354:	f1 1d       	adc	r31, r1
+    1356:	11 24       	eor	r1, r1
+    1358:	e6 58       	subi	r30, 0x86	; 134
+    135a:	fd 4f       	sbci	r31, 0xFD	; 253
+    135c:	94 91       	lpm	r25, Z
+    135e:	ab 81       	ldd	r26, Y+3	; 0x03
+    1360:	bc 81       	ldd	r27, Y+4	; 0x04
+    1362:	a7 55       	subi	r26, 0x57	; 87
+    1364:	bf 4f       	sbci	r27, 0xFF	; 255
+    1366:	8c 91       	ld	r24, X
+    1368:	e9 2f       	mov	r30, r25
+    136a:	e8 27       	eor	r30, r24
+    136c:	d8 01       	movw	r26, r16
+    136e:	19 96       	adiw	r26, 0x09	; 9
+    1370:	ec 93       	st	X, r30
+    1372:	8f 81       	ldd	r24, Y+7	; 0x07
+    1374:	82 95       	swap	r24
+    1376:	8f 70       	andi	r24, 0x0F	; 15
+    1378:	ef 81       	ldd	r30, Y+7	; 0x07
+    137a:	ef 70       	andi	r30, 0x0F	; 15
+    137c:	f0 e0       	ldi	r31, 0x00	; 0
+    137e:	b0 e1       	ldi	r27, 0x10	; 16
+    1380:	8b 9f       	mul	r24, r27
+    1382:	e0 0d       	add	r30, r0
+    1384:	f1 1d       	adc	r31, r1
+    1386:	11 24       	eor	r1, r1
+    1388:	e6 58       	subi	r30, 0x86	; 134
+    138a:	fd 4f       	sbci	r31, 0xFD	; 253
+    138c:	94 91       	lpm	r25, Z
+    138e:	ab 81       	ldd	r26, Y+3	; 0x03
+    1390:	bc 81       	ldd	r27, Y+4	; 0x04
+    1392:	a3 55       	subi	r26, 0x53	; 83
+    1394:	bf 4f       	sbci	r27, 0xFF	; 255
+    1396:	8c 91       	ld	r24, X
+    1398:	e9 2f       	mov	r30, r25
+    139a:	e8 27       	eor	r30, r24
+    139c:	d8 01       	movw	r26, r16
+    139e:	1d 96       	adiw	r26, 0x0d	; 13
+    13a0:	ec 93       	st	X, r30
+	
+	IO8[2] = ReadMem(SBox[(Temp[10]>>4 ) & 0xf][Temp[10] & 0xf])	^ RK[2]; IO8[6]  = ReadMem(SBox[(Temp[14]>>4 ) & 0xf][Temp[14] & 0xf])	^ RK[6];
+    13a2:	8d 2d       	mov	r24, r13
+    13a4:	82 95       	swap	r24
+    13a6:	8f 70       	andi	r24, 0x0F	; 15
+    13a8:	ed 2d       	mov	r30, r13
+    13aa:	ef 70       	andi	r30, 0x0F	; 15
+    13ac:	f0 e0       	ldi	r31, 0x00	; 0
+    13ae:	b0 e1       	ldi	r27, 0x10	; 16
+    13b0:	8b 9f       	mul	r24, r27
+    13b2:	e0 0d       	add	r30, r0
+    13b4:	f1 1d       	adc	r31, r1
+    13b6:	11 24       	eor	r1, r1
+    13b8:	e6 58       	subi	r30, 0x86	; 134
+    13ba:	fd 4f       	sbci	r31, 0xFD	; 253
+    13bc:	94 91       	lpm	r25, Z
+    13be:	ab 81       	ldd	r26, Y+3	; 0x03
+    13c0:	bc 81       	ldd	r27, Y+4	; 0x04
+    13c2:	ae 55       	subi	r26, 0x5E	; 94
+    13c4:	bf 4f       	sbci	r27, 0xFF	; 255
+    13c6:	8c 91       	ld	r24, X
+    13c8:	e9 2f       	mov	r30, r25
+    13ca:	e8 27       	eor	r30, r24
+    13cc:	d8 01       	movw	r26, r16
+    13ce:	12 96       	adiw	r26, 0x02	; 2
+    13d0:	ec 93       	st	X, r30
+    13d2:	86 2f       	mov	r24, r22
+    13d4:	82 95       	swap	r24
+    13d6:	8f 70       	andi	r24, 0x0F	; 15
+    13d8:	6f 70       	andi	r22, 0x0F	; 15
+    13da:	e6 2f       	mov	r30, r22
+    13dc:	f0 e0       	ldi	r31, 0x00	; 0
+    13de:	b0 e1       	ldi	r27, 0x10	; 16
+    13e0:	8b 9f       	mul	r24, r27
+    13e2:	e0 0d       	add	r30, r0
+    13e4:	f1 1d       	adc	r31, r1
+    13e6:	11 24       	eor	r1, r1
+    13e8:	e6 58       	subi	r30, 0x86	; 134
+    13ea:	fd 4f       	sbci	r31, 0xFD	; 253
+    13ec:	94 91       	lpm	r25, Z
+    13ee:	ab 81       	ldd	r26, Y+3	; 0x03
+    13f0:	bc 81       	ldd	r27, Y+4	; 0x04
+    13f2:	aa 55       	subi	r26, 0x5A	; 90
+    13f4:	bf 4f       	sbci	r27, 0xFF	; 255
+    13f6:	8c 91       	ld	r24, X
+    13f8:	e9 2f       	mov	r30, r25
+    13fa:	e8 27       	eor	r30, r24
+    13fc:	d8 01       	movw	r26, r16
+    13fe:	16 96       	adiw	r26, 0x06	; 6
+    1400:	ec 93       	st	X, r30
+	IO8[10] = ReadMem(SBox[(Temp[2]>>4 ) & 0xf][Temp[2] & 0xf])		^ RK[10];IO8[14] = ReadMem(SBox[(Temp[6]>>4 ) & 0xf][Temp[6] & 0xf])	^ RK[14];
+    1402:	85 2d       	mov	r24, r5
+    1404:	82 95       	swap	r24
+    1406:	8f 70       	andi	r24, 0x0F	; 15
+    1408:	e5 2d       	mov	r30, r5
+    140a:	ef 70       	andi	r30, 0x0F	; 15
+    140c:	f0 e0       	ldi	r31, 0x00	; 0
+    140e:	b0 e1       	ldi	r27, 0x10	; 16
+    1410:	8b 9f       	mul	r24, r27
+    1412:	e0 0d       	add	r30, r0
+    1414:	f1 1d       	adc	r31, r1
+    1416:	11 24       	eor	r1, r1
+    1418:	e6 58       	subi	r30, 0x86	; 134
+    141a:	fd 4f       	sbci	r31, 0xFD	; 253
+    141c:	94 91       	lpm	r25, Z
+    141e:	ab 81       	ldd	r26, Y+3	; 0x03
+    1420:	bc 81       	ldd	r27, Y+4	; 0x04
+    1422:	a6 55       	subi	r26, 0x56	; 86
+    1424:	bf 4f       	sbci	r27, 0xFF	; 255
+    1426:	8c 91       	ld	r24, X
+    1428:	e9 2f       	mov	r30, r25
+    142a:	e8 27       	eor	r30, r24
+    142c:	d8 01       	movw	r26, r16
+    142e:	1a 96       	adiw	r26, 0x0a	; 10
+    1430:	ec 93       	st	X, r30
+    1432:	86 2d       	mov	r24, r6
+    1434:	82 95       	swap	r24
+    1436:	8f 70       	andi	r24, 0x0F	; 15
+    1438:	e6 2d       	mov	r30, r6
+    143a:	ef 70       	andi	r30, 0x0F	; 15
+    143c:	f0 e0       	ldi	r31, 0x00	; 0
+    143e:	b0 e1       	ldi	r27, 0x10	; 16
+    1440:	8b 9f       	mul	r24, r27
+    1442:	e0 0d       	add	r30, r0
+    1444:	f1 1d       	adc	r31, r1
+    1446:	11 24       	eor	r1, r1
+    1448:	e6 58       	subi	r30, 0x86	; 134
+    144a:	fd 4f       	sbci	r31, 0xFD	; 253
+    144c:	94 91       	lpm	r25, Z
+    144e:	ab 81       	ldd	r26, Y+3	; 0x03
+    1450:	bc 81       	ldd	r27, Y+4	; 0x04
+    1452:	a2 55       	subi	r26, 0x52	; 82
+    1454:	bf 4f       	sbci	r27, 0xFF	; 255
+    1456:	8c 91       	ld	r24, X
+    1458:	e9 2f       	mov	r30, r25
+    145a:	e8 27       	eor	r30, r24
+    145c:	d8 01       	movw	r26, r16
+    145e:	1e 96       	adiw	r26, 0x0e	; 14
+    1460:	ec 93       	st	X, r30
+	
+	IO8[3] = ReadMem(SBox[(Temp[15]>>4 ) & 0xf][Temp[15] & 0xf])	^ RK[3]; IO8[7]  = ReadMem(SBox[(Temp[3]>>4 ) & 0xf][Temp[3] & 0xf])	^ RK[7];
+    1462:	84 2f       	mov	r24, r20
+    1464:	82 95       	swap	r24
+    1466:	8f 70       	andi	r24, 0x0F	; 15
+    1468:	4f 70       	andi	r20, 0x0F	; 15
+    146a:	e4 2f       	mov	r30, r20
+    146c:	f0 e0       	ldi	r31, 0x00	; 0
+    146e:	b0 e1       	ldi	r27, 0x10	; 16
+    1470:	8b 9f       	mul	r24, r27
+    1472:	e0 0d       	add	r30, r0
+    1474:	f1 1d       	adc	r31, r1
+    1476:	11 24       	eor	r1, r1
+    1478:	e6 58       	subi	r30, 0x86	; 134
+    147a:	fd 4f       	sbci	r31, 0xFD	; 253
+    147c:	94 91       	lpm	r25, Z
+    147e:	ab 81       	ldd	r26, Y+3	; 0x03
+    1480:	bc 81       	ldd	r27, Y+4	; 0x04
+    1482:	ad 55       	subi	r26, 0x5D	; 93
+    1484:	bf 4f       	sbci	r27, 0xFF	; 255
+    1486:	8c 91       	ld	r24, X
+    1488:	e9 2f       	mov	r30, r25
+    148a:	e8 27       	eor	r30, r24
+    148c:	d8 01       	movw	r26, r16
+    148e:	13 96       	adiw	r26, 0x03	; 3
+    1490:	ec 93       	st	X, r30
+    1492:	87 2d       	mov	r24, r7
+    1494:	82 95       	swap	r24
+    1496:	8f 70       	andi	r24, 0x0F	; 15
+    1498:	e7 2d       	mov	r30, r7
+    149a:	ef 70       	andi	r30, 0x0F	; 15
+    149c:	f0 e0       	ldi	r31, 0x00	; 0
+    149e:	b0 e1       	ldi	r27, 0x10	; 16
+    14a0:	8b 9f       	mul	r24, r27
+    14a2:	e0 0d       	add	r30, r0
+    14a4:	f1 1d       	adc	r31, r1
+    14a6:	11 24       	eor	r1, r1
+    14a8:	e6 58       	subi	r30, 0x86	; 134
+    14aa:	fd 4f       	sbci	r31, 0xFD	; 253
+    14ac:	94 91       	lpm	r25, Z
+    14ae:	ab 81       	ldd	r26, Y+3	; 0x03
+    14b0:	bc 81       	ldd	r27, Y+4	; 0x04
+    14b2:	a9 55       	subi	r26, 0x59	; 89
+    14b4:	bf 4f       	sbci	r27, 0xFF	; 255
+    14b6:	8c 91       	ld	r24, X
+    14b8:	e9 2f       	mov	r30, r25
+    14ba:	e8 27       	eor	r30, r24
+    14bc:	d8 01       	movw	r26, r16
+    14be:	17 96       	adiw	r26, 0x07	; 7
+    14c0:	ec 93       	st	X, r30
+	IO8[11] = ReadMem(SBox[(Temp[7]>>4 ) & 0xf][Temp[7] & 0xf])		^ RK[11];IO8[15] = ReadMem(SBox[(Temp[11]>>4 ) & 0xf][Temp[11] & 0xf])  ^ RK[15];
+    14c2:	82 2d       	mov	r24, r2
+    14c4:	82 95       	swap	r24
+    14c6:	8f 70       	andi	r24, 0x0F	; 15
+    14c8:	e2 2d       	mov	r30, r2
+    14ca:	ef 70       	andi	r30, 0x0F	; 15
+    14cc:	f0 e0       	ldi	r31, 0x00	; 0
+    14ce:	b0 e1       	ldi	r27, 0x10	; 16
+    14d0:	8b 9f       	mul	r24, r27
+    14d2:	e0 0d       	add	r30, r0
+    14d4:	f1 1d       	adc	r31, r1
+    14d6:	11 24       	eor	r1, r1
+    14d8:	e6 58       	subi	r30, 0x86	; 134
+    14da:	fd 4f       	sbci	r31, 0xFD	; 253
+    14dc:	94 91       	lpm	r25, Z
+    14de:	ab 81       	ldd	r26, Y+3	; 0x03
+    14e0:	bc 81       	ldd	r27, Y+4	; 0x04
+    14e2:	a5 55       	subi	r26, 0x55	; 85
+    14e4:	bf 4f       	sbci	r27, 0xFF	; 255
+    14e6:	8c 91       	ld	r24, X
+    14e8:	e9 2f       	mov	r30, r25
+    14ea:	e8 27       	eor	r30, r24
+    14ec:	d8 01       	movw	r26, r16
+    14ee:	1b 96       	adiw	r26, 0x0b	; 11
+    14f0:	ec 93       	st	X, r30
+    14f2:	82 2f       	mov	r24, r18
+    14f4:	82 95       	swap	r24
+    14f6:	8f 70       	andi	r24, 0x0F	; 15
+    14f8:	e2 2f       	mov	r30, r18
+    14fa:	ef 70       	andi	r30, 0x0F	; 15
+    14fc:	f0 e0       	ldi	r31, 0x00	; 0
+    14fe:	b0 e1       	ldi	r27, 0x10	; 16
+    1500:	8b 9f       	mul	r24, r27
+    1502:	e0 0d       	add	r30, r0
+    1504:	f1 1d       	adc	r31, r1
+    1506:	11 24       	eor	r1, r1
+    1508:	e6 58       	subi	r30, 0x86	; 134
+    150a:	fd 4f       	sbci	r31, 0xFD	; 253
+    150c:	94 91       	lpm	r25, Z
+    150e:	ab 81       	ldd	r26, Y+3	; 0x03
+    1510:	bc 81       	ldd	r27, Y+4	; 0x04
+    1512:	a1 55       	subi	r26, 0x51	; 81
+    1514:	bf 4f       	sbci	r27, 0xFF	; 255
+    1516:	8c 91       	ld	r24, X
+    1518:	e9 2f       	mov	r30, r25
+    151a:	e8 27       	eor	r30, r24
+    151c:	d8 01       	movw	r26, r16
+    151e:	1f 96       	adiw	r26, 0x0f	; 15
+    1520:	ec 93       	st	X, r30
+}
+    1522:	2b 96       	adiw	r28, 0x0b	; 11
+    1524:	0f b6       	in	r0, 0x3f	; 63
+    1526:	f8 94       	cli
+    1528:	de bf       	out	0x3e, r29	; 62
+    152a:	0f be       	out	0x3f, r0	; 63
+    152c:	cd bf       	out	0x3d, r28	; 61
+    152e:	df 91       	pop	r29
+    1530:	cf 91       	pop	r28
+    1532:	1f 91       	pop	r17
+    1534:	0f 91       	pop	r16
+    1536:	ff 90       	pop	r15
+    1538:	ef 90       	pop	r14
+    153a:	df 90       	pop	r13
+    153c:	cf 90       	pop	r12
+    153e:	bf 90       	pop	r11
+    1540:	af 90       	pop	r10
+    1542:	9f 90       	pop	r9
+    1544:	8f 90       	pop	r8
+    1546:	7f 90       	pop	r7
+    1548:	6f 90       	pop	r6
+    154a:	5f 90       	pop	r5
+    154c:	4f 90       	pop	r4
+    154e:	3f 90       	pop	r3
+    1550:	2f 90       	pop	r2
+    1552:	08 95       	ret
+
+00001554 <malloc>:
+    1554:	cf 93       	push	r28
+    1556:	df 93       	push	r29
+    1558:	82 30       	cpi	r24, 0x02	; 2
+    155a:	91 05       	cpc	r25, r1
+    155c:	10 f4       	brcc	.+4      	; 0x1562 <malloc+0xe>
+    155e:	82 e0       	ldi	r24, 0x02	; 2
+    1560:	90 e0       	ldi	r25, 0x00	; 0
+    1562:	e0 91 28 01 	lds	r30, 0x0128
+    1566:	f0 91 29 01 	lds	r31, 0x0129
+    156a:	20 e0       	ldi	r18, 0x00	; 0
+    156c:	30 e0       	ldi	r19, 0x00	; 0
+    156e:	c0 e0       	ldi	r28, 0x00	; 0
+    1570:	d0 e0       	ldi	r29, 0x00	; 0
+    1572:	30 97       	sbiw	r30, 0x00	; 0
+    1574:	11 f1       	breq	.+68     	; 0x15ba <malloc+0x66>
+    1576:	40 81       	ld	r20, Z
+    1578:	51 81       	ldd	r21, Z+1	; 0x01
+    157a:	48 17       	cp	r20, r24
+    157c:	59 07       	cpc	r21, r25
+    157e:	c0 f0       	brcs	.+48     	; 0x15b0 <malloc+0x5c>
+    1580:	48 17       	cp	r20, r24
+    1582:	59 07       	cpc	r21, r25
+    1584:	61 f4       	brne	.+24     	; 0x159e <malloc+0x4a>
+    1586:	82 81       	ldd	r24, Z+2	; 0x02
+    1588:	93 81       	ldd	r25, Z+3	; 0x03
+    158a:	20 97       	sbiw	r28, 0x00	; 0
+    158c:	19 f0       	breq	.+6      	; 0x1594 <malloc+0x40>
+    158e:	9b 83       	std	Y+3, r25	; 0x03
+    1590:	8a 83       	std	Y+2, r24	; 0x02
+    1592:	2b c0       	rjmp	.+86     	; 0x15ea <malloc+0x96>
+    1594:	90 93 29 01 	sts	0x0129, r25
+    1598:	80 93 28 01 	sts	0x0128, r24
+    159c:	26 c0       	rjmp	.+76     	; 0x15ea <malloc+0x96>
+    159e:	21 15       	cp	r18, r1
+    15a0:	31 05       	cpc	r19, r1
+    15a2:	19 f0       	breq	.+6      	; 0x15aa <malloc+0x56>
+    15a4:	42 17       	cp	r20, r18
+    15a6:	53 07       	cpc	r21, r19
+    15a8:	18 f4       	brcc	.+6      	; 0x15b0 <malloc+0x5c>
+    15aa:	9a 01       	movw	r18, r20
+    15ac:	be 01       	movw	r22, r28
+    15ae:	df 01       	movw	r26, r30
+    15b0:	ef 01       	movw	r28, r30
+    15b2:	02 80       	ldd	r0, Z+2	; 0x02
+    15b4:	f3 81       	ldd	r31, Z+3	; 0x03
+    15b6:	e0 2d       	mov	r30, r0
+    15b8:	dc cf       	rjmp	.-72     	; 0x1572 <malloc+0x1e>
+    15ba:	21 15       	cp	r18, r1
+    15bc:	31 05       	cpc	r19, r1
+    15be:	09 f1       	breq	.+66     	; 0x1602 <malloc+0xae>
+    15c0:	28 1b       	sub	r18, r24
+    15c2:	39 0b       	sbc	r19, r25
+    15c4:	24 30       	cpi	r18, 0x04	; 4
+    15c6:	31 05       	cpc	r19, r1
+    15c8:	90 f4       	brcc	.+36     	; 0x15ee <malloc+0x9a>
+    15ca:	12 96       	adiw	r26, 0x02	; 2
+    15cc:	8d 91       	ld	r24, X+
+    15ce:	9c 91       	ld	r25, X
+    15d0:	13 97       	sbiw	r26, 0x03	; 3
+    15d2:	61 15       	cp	r22, r1
+    15d4:	71 05       	cpc	r23, r1
+    15d6:	21 f0       	breq	.+8      	; 0x15e0 <malloc+0x8c>
+    15d8:	fb 01       	movw	r30, r22
+    15da:	93 83       	std	Z+3, r25	; 0x03
+    15dc:	82 83       	std	Z+2, r24	; 0x02
+    15de:	04 c0       	rjmp	.+8      	; 0x15e8 <malloc+0x94>
+    15e0:	90 93 29 01 	sts	0x0129, r25
+    15e4:	80 93 28 01 	sts	0x0128, r24
+    15e8:	fd 01       	movw	r30, r26
+    15ea:	32 96       	adiw	r30, 0x02	; 2
+    15ec:	44 c0       	rjmp	.+136    	; 0x1676 <malloc+0x122>
+    15ee:	fd 01       	movw	r30, r26
+    15f0:	e2 0f       	add	r30, r18
+    15f2:	f3 1f       	adc	r31, r19
+    15f4:	81 93       	st	Z+, r24
+    15f6:	91 93       	st	Z+, r25
+    15f8:	22 50       	subi	r18, 0x02	; 2
+    15fa:	31 09       	sbc	r19, r1
+    15fc:	2d 93       	st	X+, r18
+    15fe:	3c 93       	st	X, r19
+    1600:	3a c0       	rjmp	.+116    	; 0x1676 <malloc+0x122>
+    1602:	20 91 26 01 	lds	r18, 0x0126
+    1606:	30 91 27 01 	lds	r19, 0x0127
+    160a:	23 2b       	or	r18, r19
+    160c:	41 f4       	brne	.+16     	; 0x161e <malloc+0xca>
+    160e:	20 91 02 01 	lds	r18, 0x0102
+    1612:	30 91 03 01 	lds	r19, 0x0103
+    1616:	30 93 27 01 	sts	0x0127, r19
+    161a:	20 93 26 01 	sts	0x0126, r18
+    161e:	20 91 00 01 	lds	r18, 0x0100
+    1622:	30 91 01 01 	lds	r19, 0x0101
+    1626:	21 15       	cp	r18, r1
+    1628:	31 05       	cpc	r19, r1
+    162a:	41 f4       	brne	.+16     	; 0x163c <malloc+0xe8>
+    162c:	2d b7       	in	r18, 0x3d	; 61
+    162e:	3e b7       	in	r19, 0x3e	; 62
+    1630:	40 91 04 01 	lds	r20, 0x0104
+    1634:	50 91 05 01 	lds	r21, 0x0105
+    1638:	24 1b       	sub	r18, r20
+    163a:	35 0b       	sbc	r19, r21
+    163c:	e0 91 26 01 	lds	r30, 0x0126
+    1640:	f0 91 27 01 	lds	r31, 0x0127
+    1644:	e2 17       	cp	r30, r18
+    1646:	f3 07       	cpc	r31, r19
+    1648:	a0 f4       	brcc	.+40     	; 0x1672 <malloc+0x11e>
+    164a:	2e 1b       	sub	r18, r30
+    164c:	3f 0b       	sbc	r19, r31
+    164e:	28 17       	cp	r18, r24
+    1650:	39 07       	cpc	r19, r25
+    1652:	78 f0       	brcs	.+30     	; 0x1672 <malloc+0x11e>
+    1654:	ac 01       	movw	r20, r24
+    1656:	4e 5f       	subi	r20, 0xFE	; 254
+    1658:	5f 4f       	sbci	r21, 0xFF	; 255
+    165a:	24 17       	cp	r18, r20
+    165c:	35 07       	cpc	r19, r21
+    165e:	48 f0       	brcs	.+18     	; 0x1672 <malloc+0x11e>
+    1660:	4e 0f       	add	r20, r30
+    1662:	5f 1f       	adc	r21, r31
+    1664:	50 93 27 01 	sts	0x0127, r21
+    1668:	40 93 26 01 	sts	0x0126, r20
+    166c:	81 93       	st	Z+, r24
+    166e:	91 93       	st	Z+, r25
+    1670:	02 c0       	rjmp	.+4      	; 0x1676 <malloc+0x122>
+    1672:	e0 e0       	ldi	r30, 0x00	; 0
+    1674:	f0 e0       	ldi	r31, 0x00	; 0
+    1676:	cf 01       	movw	r24, r30
+    1678:	df 91       	pop	r29
+    167a:	cf 91       	pop	r28
+    167c:	08 95       	ret
+
+0000167e <free>:
+    167e:	0f 93       	push	r16
+    1680:	1f 93       	push	r17
+    1682:	cf 93       	push	r28
+    1684:	df 93       	push	r29
+    1686:	00 97       	sbiw	r24, 0x00	; 0
+    1688:	09 f4       	brne	.+2      	; 0x168c <free+0xe>
+    168a:	8c c0       	rjmp	.+280    	; 0x17a4 <free+0x126>
+    168c:	fc 01       	movw	r30, r24
+    168e:	32 97       	sbiw	r30, 0x02	; 2
+    1690:	13 82       	std	Z+3, r1	; 0x03
+    1692:	12 82       	std	Z+2, r1	; 0x02
+    1694:	00 91 28 01 	lds	r16, 0x0128
+    1698:	10 91 29 01 	lds	r17, 0x0129
+    169c:	01 15       	cp	r16, r1
+    169e:	11 05       	cpc	r17, r1
+    16a0:	81 f4       	brne	.+32     	; 0x16c2 <free+0x44>
+    16a2:	20 81       	ld	r18, Z
+    16a4:	31 81       	ldd	r19, Z+1	; 0x01
+    16a6:	82 0f       	add	r24, r18
+    16a8:	93 1f       	adc	r25, r19
+    16aa:	20 91 26 01 	lds	r18, 0x0126
+    16ae:	30 91 27 01 	lds	r19, 0x0127
+    16b2:	28 17       	cp	r18, r24
+    16b4:	39 07       	cpc	r19, r25
+    16b6:	79 f5       	brne	.+94     	; 0x1716 <free+0x98>
+    16b8:	f0 93 27 01 	sts	0x0127, r31
+    16bc:	e0 93 26 01 	sts	0x0126, r30
+    16c0:	71 c0       	rjmp	.+226    	; 0x17a4 <free+0x126>
+    16c2:	d8 01       	movw	r26, r16
+    16c4:	40 e0       	ldi	r20, 0x00	; 0
+    16c6:	50 e0       	ldi	r21, 0x00	; 0
+    16c8:	ae 17       	cp	r26, r30
+    16ca:	bf 07       	cpc	r27, r31
+    16cc:	50 f4       	brcc	.+20     	; 0x16e2 <free+0x64>
+    16ce:	12 96       	adiw	r26, 0x02	; 2
+    16d0:	2d 91       	ld	r18, X+
+    16d2:	3c 91       	ld	r19, X
+    16d4:	13 97       	sbiw	r26, 0x03	; 3
+    16d6:	ad 01       	movw	r20, r26
+    16d8:	21 15       	cp	r18, r1
+    16da:	31 05       	cpc	r19, r1
+    16dc:	09 f1       	breq	.+66     	; 0x1720 <free+0xa2>
+    16de:	d9 01       	movw	r26, r18
+    16e0:	f3 cf       	rjmp	.-26     	; 0x16c8 <free+0x4a>
+    16e2:	9d 01       	movw	r18, r26
+    16e4:	da 01       	movw	r26, r20
+    16e6:	33 83       	std	Z+3, r19	; 0x03
+    16e8:	22 83       	std	Z+2, r18	; 0x02
+    16ea:	60 81       	ld	r22, Z
+    16ec:	71 81       	ldd	r23, Z+1	; 0x01
+    16ee:	86 0f       	add	r24, r22
+    16f0:	97 1f       	adc	r25, r23
+    16f2:	82 17       	cp	r24, r18
+    16f4:	93 07       	cpc	r25, r19
+    16f6:	69 f4       	brne	.+26     	; 0x1712 <free+0x94>
+    16f8:	ec 01       	movw	r28, r24
+    16fa:	28 81       	ld	r18, Y
+    16fc:	39 81       	ldd	r19, Y+1	; 0x01
+    16fe:	26 0f       	add	r18, r22
+    1700:	37 1f       	adc	r19, r23
+    1702:	2e 5f       	subi	r18, 0xFE	; 254
+    1704:	3f 4f       	sbci	r19, 0xFF	; 255
+    1706:	31 83       	std	Z+1, r19	; 0x01
+    1708:	20 83       	st	Z, r18
+    170a:	8a 81       	ldd	r24, Y+2	; 0x02
+    170c:	9b 81       	ldd	r25, Y+3	; 0x03
+    170e:	93 83       	std	Z+3, r25	; 0x03
+    1710:	82 83       	std	Z+2, r24	; 0x02
+    1712:	45 2b       	or	r20, r21
+    1714:	29 f4       	brne	.+10     	; 0x1720 <free+0xa2>
+    1716:	f0 93 29 01 	sts	0x0129, r31
+    171a:	e0 93 28 01 	sts	0x0128, r30
+    171e:	42 c0       	rjmp	.+132    	; 0x17a4 <free+0x126>
+    1720:	13 96       	adiw	r26, 0x03	; 3
+    1722:	fc 93       	st	X, r31
+    1724:	ee 93       	st	-X, r30
+    1726:	12 97       	sbiw	r26, 0x02	; 2
+    1728:	ed 01       	movw	r28, r26
+    172a:	49 91       	ld	r20, Y+
+    172c:	59 91       	ld	r21, Y+
+    172e:	9e 01       	movw	r18, r28
+    1730:	24 0f       	add	r18, r20
+    1732:	35 1f       	adc	r19, r21
+    1734:	e2 17       	cp	r30, r18
+    1736:	f3 07       	cpc	r31, r19
+    1738:	71 f4       	brne	.+28     	; 0x1756 <free+0xd8>
+    173a:	80 81       	ld	r24, Z
+    173c:	91 81       	ldd	r25, Z+1	; 0x01
+    173e:	84 0f       	add	r24, r20
+    1740:	95 1f       	adc	r25, r21
+    1742:	02 96       	adiw	r24, 0x02	; 2
+    1744:	11 96       	adiw	r26, 0x01	; 1
+    1746:	9c 93       	st	X, r25
+    1748:	8e 93       	st	-X, r24
+    174a:	82 81       	ldd	r24, Z+2	; 0x02
+    174c:	93 81       	ldd	r25, Z+3	; 0x03
+    174e:	13 96       	adiw	r26, 0x03	; 3
+    1750:	9c 93       	st	X, r25
+    1752:	8e 93       	st	-X, r24
+    1754:	12 97       	sbiw	r26, 0x02	; 2
+    1756:	e0 e0       	ldi	r30, 0x00	; 0
+    1758:	f0 e0       	ldi	r31, 0x00	; 0
+    175a:	d8 01       	movw	r26, r16
+    175c:	12 96       	adiw	r26, 0x02	; 2
+    175e:	8d 91       	ld	r24, X+
+    1760:	9c 91       	ld	r25, X
+    1762:	13 97       	sbiw	r26, 0x03	; 3
+    1764:	00 97       	sbiw	r24, 0x00	; 0
+    1766:	19 f0       	breq	.+6      	; 0x176e <free+0xf0>
+    1768:	f8 01       	movw	r30, r16
+    176a:	8c 01       	movw	r16, r24
+    176c:	f6 cf       	rjmp	.-20     	; 0x175a <free+0xdc>
+    176e:	8d 91       	ld	r24, X+
+    1770:	9c 91       	ld	r25, X
+    1772:	98 01       	movw	r18, r16
+    1774:	2e 5f       	subi	r18, 0xFE	; 254
+    1776:	3f 4f       	sbci	r19, 0xFF	; 255
+    1778:	82 0f       	add	r24, r18
+    177a:	93 1f       	adc	r25, r19
+    177c:	20 91 26 01 	lds	r18, 0x0126
+    1780:	30 91 27 01 	lds	r19, 0x0127
+    1784:	28 17       	cp	r18, r24
+    1786:	39 07       	cpc	r19, r25
+    1788:	69 f4       	brne	.+26     	; 0x17a4 <free+0x126>
+    178a:	30 97       	sbiw	r30, 0x00	; 0
+    178c:	29 f4       	brne	.+10     	; 0x1798 <free+0x11a>
+    178e:	10 92 29 01 	sts	0x0129, r1
+    1792:	10 92 28 01 	sts	0x0128, r1
+    1796:	02 c0       	rjmp	.+4      	; 0x179c <free+0x11e>
+    1798:	13 82       	std	Z+3, r1	; 0x03
+    179a:	12 82       	std	Z+2, r1	; 0x02
+    179c:	10 93 27 01 	sts	0x0127, r17
+    17a0:	00 93 26 01 	sts	0x0126, r16
+    17a4:	df 91       	pop	r29
+    17a6:	cf 91       	pop	r28
+    17a8:	1f 91       	pop	r17
+    17aa:	0f 91       	pop	r16
+    17ac:	08 95       	ret
+
+000017ae <_exit>:
+    17ae:	f8 94       	cli
+
+000017b0 <__stop_program>:
+    17b0:	ff cf       	rjmp	.-2      	; 0x17b0 <__stop_program>

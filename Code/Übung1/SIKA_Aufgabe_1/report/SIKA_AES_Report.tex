@@ -1,0 +1,202 @@
+\RequirePackage[l2tabu,orthodox]{nag}
+\documentclass[abstract,bibliography=totocnumbered,listof=leveldown,open=any,titlepage]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\DeclareMathOperator*{\OPLUS}{\oplus}
+\usepackage{amssymb}
+\usepackage[english]{babel}
+\usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{tikz-timing}
+\usepackage{xspace}
+\usepackage{epstopdf}
+\usepackage{algorithm,algorithmic}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\begin{document}
+	
+	\begin{titlepage}
+		\noindent
+		\begin{minipage}{\linewidth}
+			\includegraphics[height=3em]{pictures/logo_ei_black.eps}
+			\hspace{1em}
+			\includegraphics[height=3em]{pictures/logo_sec_black.pdf}
+			\hfill
+			\includegraphics[height=3em]{pictures/logo_tum_black.eps}
+		\end{minipage}
+		\vspace*{1em} \\
+		\textsf
+		{
+			\noindent \\
+			Technische Universität München \\
+			Fakultät für Elektrotechnik und Informationstechnik \\
+			Lehrstuhl für Sicherheit in der Informationstechnik \\
+			\vfill \noindent
+			{\LARGE Sichere Implementierungen kryptographisher Verfahren \\ WS 2015-2016 Übungsbericht:} \\
+			\vspace{1em} \\
+			{\Large Implementierung des Advanced Encryption
+                        Standards (AES) Algorithmus auf dem ATmega644V Mikrokontroller }
+			\vfill \noindent
+			\begin{tabular}{@{}p{4cm}l}
+				Author: & Zhiwei Han \\
+				E-mail: & hanzw356255531@icloud.de \\
+				LRZ Kennung: & ga63vuf \\
+				Matrikelnummer: & 03672554
+			\end{tabular}
+		}
+	\end{titlepage}
+	
+	\chapter{Beschreibung der AES Implementierung}
+	
+       \section{S-box}
+
+		Erklären Sie ausführlich Ihre Implementierung der S-box. 
+		%
+		Beschreiben Sie Ihre Strategie und nennen Sie ggf. Beispiele (Pseudocode). 	\vspace{1em} \\
+		%
+		Das Ausgangstext des Zwischenzustands nach SubByte in diesem Programm wird nicht durch eine on-the-fly Algorithmus durchgeführt, 
+		sondern durch Suchen einer sogenannten Lookup-Tabelle, um die Berechnungszeit zu verkürzen.	\vspace{1mm} \\
+		Die S-Box-Tabelle wird voraussichtlich durch das Schlusswort "PROGMEM" in Programmspeicher gespeichert. Während des S-Box Prozess wird jede eigene Wert des Eingangstexts im Speicher durchgesucht. Und dann geht das Programm in den nächsten Schritt ein.\vspace{1mm}\\
+		Pseudocode: 
+		\begin{algorithm}  % enter the algorithm environment
+			\caption{SBox Implementation}   % give the algorithm a caption
+			\label{alg1} % and a label for \ref{} commands later in the document
+			\begin{algorithmic}                    % enter the algorithmic environment
+				\REQUIRE $acht\ Bit\ Wert$
+				\ENSURE $Das\ durch\ SubByte\ Ergebnis$
+				\STATE$const\ Array\ SBox[16][16] \gets Die\ 256\ Elemente\ in\ Lookup-Tabelle$\\
+				\STATE $..........$
+				\STATE $..........$
+				\STATE $..........$
+				\STATE $SubByte(P0) \gets SBox[RowNum][ColumnNum]$
+			\end{algorithmic}
+		\end{algorithm}
+        \section{MixColumns}
+		Erklären Sie ausführlich Ihre Implementierung der MixColumns und nennen Sie ggf. Beispiele (Pseudocode).\vspace{3mm} \\
+		Als den komplexesten Teil der Algorithmus handelt sich MixColumns hier um eine Lookup-Strategie. \vspace{1mm} \\
+		1. In dieser Implementation werden andere zwei Lookup-Tabellen für Multiplikation auch gespeichert. Jeder erhält 256 Elemente(ein Byte) in ihren einzelnem Fall , also wenn das Polynom mit X oder (X+1) multipliziert.  \\
+		2. Die Reihenfolge der XOR Berechnung laut des MCB Matrix wird jedoch vorgerechnet und in der Wertzuordnung eingesetzt. Die XOR Berechnung wird nach der Suche der Tabellen eingeführt.\vspace{1mm}\\
+		Pseudocode: 
+		\begin{algorithm}  % enter the algorithm environment
+			\caption{MixColumns Implementation}   % give the algorithm a caption
+			\label{alg1} % and a label for \ref{} commands later in the document
+			\begin{algorithmic}                    % enter the algorithmic environment
+				\REQUIRE $128\ Bit\ Wert$
+				\ENSURE $Das\ durch\ Mixcolumns\ Ergebnis$
+				\STATE $const\ Array\ Multi2[256] \gets {Polynome * X}$
+				\STATE $const\ Array\ Multi3[256] \gets {Polynome * (X+1)}$
+				\STATE $..........$
+
+				\STATE ${Temp0 \gets P0}$
+				\STATE ${Temp1 \gets P1}$
+				\STATE ${Temp2 \gets P2}$
+				\STATE ${Temp3 \gets P3}$			
+				\STATE Round1:
+				\STATE ${Mixcolumns(P0) \gets Multi2[Temp0] \OPLUS Multi3[Temp1] \OPLUS Temp2 \OPLUS Temp3}$
+				\STATE ${Mixcolumns(P1) \gets  Temp0 \OPLUS Multi2[Temp1] \OPLUS Multi3[Temp2] \OPLUS Temp3}$
+ 				\STATE ${Mixcolumns(P2) \gets Multi3[Temp0] \OPLUS Temp1 \OPLUS Multi2[Temp2] \OPLUS Temp3}$
+				\STATE ${Mixcolumns(P3) \gets Temp0 \OPLUS Temp1 \OPLUS Multi2[Temp2] \OPLUS Multi3[Temp3] }$
+				\STATE $..........$
+				\STATE Round2:
+				\STATE ${Mixcolumns(Temp0) \gets Multi2[P0] \OPLUS Multi3[P1] \OPLUS P2 \OPLUS P3}$
+				\STATE ${Mixcolumns(Temp1) \gets  P0 \OPLUS Multi2[P1] \OPLUS Multi3[P2] \OPLUS P3}$
+				\STATE ${Mixcolumns(Temp2) \gets Multi3[P0] \OPLUS P1 \OPLUS Multi2[P2] \OPLUS P3}$
+				\STATE ${Mixcolumns(Temp3) \gets P0 \OPLUS P1 \OPLUS Multi2[P2] \OPLUS Multi3[P3] }$
+				\STATE $..........$
+				\STATE Round9:
+				\STATE ${Mixcolumns(P0) \gets Multi2[Temp0] \OPLUS Multi3[Temp1] \OPLUS Temp2 \OPLUS Temp3}$
+				\STATE ${Mixcolumns(P1) \gets  Temp0 \OPLUS Multi2[Temp1] \OPLUS Multi3[Temp2] \OPLUS Temp3}$
+				\STATE ${Mixcolumns(P2) \gets Multi3[Temp0] \OPLUS Temp1 \OPLUS Multi2[Temp2] \OPLUS Temp3}$
+				\STATE ${Mixcolumns(P3) \gets Temp0 \OPLUS Temp1 \OPLUS Multi2[Temp2] \OPLUS Multi3[Temp3] }$
+				\STATE $..........$			
+			\end{algorithmic}
+		\end{algorithm}
+		\begin{algorithm}		
+			
+		\end{algorithm}
+		
+        \section{Key Schedule}
+
+		Erklären Sie ausführlich Ihre Implementierung des Key Schedules und nennen Sie ggf. Beispiele (Pseudocode).\vspace{3mm} \\
+		%
+		Alle elf Rundschlüssen werden in der aes128\_init() Funktion vorberechnet und in dem Programmspeicher gespeichert. In der Rundberechnung werden sie durchgesucht.\vspace{1mm} \\
+		1. Zunächst wird malloc() aufgerufen, um die Speicherraum in Größe von 176 Bytes(*RK) zu erstellen. Danach speichert man Benutzer's Schlüsse also von RK[0] bis RK[3] in die ersten 16 Bytes.  \\
+		2. Dann wird RK[4] durch G Funktion der höchsten 4 Bits von RK[3] und XOR mit RK[0]. Am Ende können andere vier Bytes Schlüssen leicht berechnet werden.\\
+		3. Alle andere 10 Rundschlüssen werden einer nach dem anderem auf dieser Weise herstellt und gespeichert.\vspace{1mm}\\
+		Pseudocode: 
+		\begin{algorithm}  % enter the algorithm environment
+			\caption{Key Schedule}   % give the algorithm a caption
+			\label{alg1} % and a label for \ref{} commands later in the document
+			\begin{algorithmic}                    % enter the algorithmic environment
+				\REQUIRE $Benutzer's\ Schlüsse\ Pointer$
+				\ENSURE $Rundschlüsse\ Pointer$
+				\STATE ${RK[0] \gets UserKey[0]}$
+				\STATE ${RK[1] \gets UserKey[1]}$
+				\STATE ${RK[2] \gets UserKey[2]}$
+				\STATE ${RK[3] \gets UserKey[3]}$
+				\STATE ${i \gets 1}$
+				\WHILE{$i$}
+					\STATE ${b0 \gets (RK[3]\textgreater \textgreater 24)\& 0xff}$
+					\STATE ${b1 \gets (RK[3]\textgreater \textgreater 16)\& 0xff}$
+					\STATE ${b2 \gets (RK[3]\textgreater \textgreater 8)\& 0xff}$
+					\STATE ${b3 \gets RK[3]\ \&\ 0Xff}$  	 
+					\STATE ${RK[4] \gets (b3\textless \textless 24) \OPLUS (b0\textless \textless 16)\OPLUS(b1\textless \textless 8)\OPLUS b2 \OPLUS RK[0]}$
+					\STATE ${RK[5] \gets RK[4] \OPLUS RK[1]}$
+					\STATE ${RK[6] \gets RK[5] \OPLUS RK[2]}$
+					\STATE ${RK[7] \gets RK[6] \OPLUS RK[3]}$
+					\IF{$++i = 10$}
+						\STATE ${return\ RK-36}$
+					\ENDIF
+					\STATE ${RK+=4}$
+				\ENDWHILE
+			\end{algorithmic}
+		\end{algorithm}
+		\section{Throughtput Optimierungen}
+	
+		Nennen Sie Ihre Optimierungen für einen höhen Durchsatz.\vspace{3mm} \\
+		1. Keine Subfunktion wird in der Implementation gerichtet oder aufgerufen, weil die zeitaufwändig ist. Alle Runde in Funktion aes128\_encrypt() bestehen sich nur in einer Schleife. \\
+		2. Statt direkter on-the-fly Berechnung werden die Ergebnisse der Multiplikation und SBox in den gespeicherten Lookup-Tabellen nachgeschlagen. Deswegen kann eine große Menge von Zeit bei der Berechnung gespart werden.\\
+		3. Zudem werden alle Berechnungen in dieser Algorithmus auf der acht-Bit Weise aufgrund des 8-Bit Prozessors durchgeführt. \\
+		4. Die Rundschlüssen werden voraussichtlich berechnet und im Speicher geschrieben. Das Programm braucht nur die Rundschlüssen im Speicher nachschlagen. Das kann auch zu Zeitsparen beitragen. 
+	
+		\section{Codesize Optimierungen}
+	
+		Nennen Sie Ihre Optimierungen für eine kleine Codesize.\vspace{3mm}\\
+		1. Bei der Implementation wird eine Schleifstruktur benutzt, um die Schleifenabwicklung zu vermeiden.\\
+		2. Eine genaue Größe der Datentype also uint8\_t für Konstant ist benutzt.		
+	
+		\section{RAM Optimierungen}
+	
+		Nennen Sie Ihre Optimierungen für wenig RAM-Verbrauch.\vspace{3mm}\\
+		1. Alle Lookup-Tabellen werden in Programmspeicher gespeichert.\\
+		2. Statt der Schleifabwicklung wird eine Schleifstruktur eingesetzt. Auf dieser Weise kann auch ein bisschen RAM gespart werden. \\
+		3. Eine genaue Größe der Datentype z.B uint8\_t(acht Bits) statt int (16 Bits), die für SBox  durchsuchen geeignet ist, wird angewandt.
+		
+		\section{Results}
+		
+		Nennen Sie Ihre Ergebnisse inkl. Version des Compilers und die angewendete Optimization flags.\vspace{3mm}  \\
+		Durchschnittliche Laufzeit ist 7459,47.\\
+		Standardabweichung der Krypto-Laufzeit ist 2,87209.\\
+		RAM-Nutzung in RAM ist 301.\\
+		Programmspeichernutzung ist 5684.\vspace{1mm}\\
+		Die Version des Compilers ist gcc 4.8.2 (Ubuntu 4.8.2-19ubuntul).\vspace{1mm}\\
+		Die angewendete Optimization flags nach Reihenfolgen sind:\\
+		1. Throughtput Optimierungen.\\
+		2. RAM Optimierungen.\\
+		3. Codesize Optimierungen.
+	\bibliography{report}
+	{[1]} J. Daemen and V. Rijmen. Aes proposal: Rijndael. NIST Web page, March 1999.\\
+	{[2]} J. Daemen and V. Rijmen. The Design of Rijndael: AES - The Advanced Encryption Standard. Information Security and Cryptography. Springer, 2002.\\
+	{[3]} National Institute of Standards and Technology. Federal information processing standards FIPS 197. Advanced Encryption Standard (AES), 2001.\\
+	{[4]} Joan Daemen and Vincent Rijmen: AES Proposal: Rijndael, available online at http://csrc.nist.gov/archive/aes/rijndael/Rijndael-ammended.pdf\\
+	{[5]} Intel Corporation: Intel® Advanced Encryption Standard(AES) Instructions Set, available online at: http://software.intel.com/en-us/articles/intel-advanced-encryption-standard-aes-instructions-set\\
+	{[6]} Çetin Kaya Koç (Ed.), Cryptographic Engineering, Springer Verlag, 2009.\\
+	{[7]} National Institute of Standards and Technology (NIST): FIPS-197: Advanced Encryption Standard, 2001.\\
+	{[8]} National Institute of Standards and Technology (NIST): FIPS-46-3: Data Encryption Standard, 1999.\\
+	\bibliographystyle{acm}
+	
+\end{document}
